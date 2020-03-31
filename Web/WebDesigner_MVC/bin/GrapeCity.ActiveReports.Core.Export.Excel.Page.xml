@@ -1,0 +1,2359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+	<assembly>
+		<name>GrapeCity.ActiveReports.Core.Export.Excel.Page</name>
+	</assembly>
+	<members>
+		<member name="T:GrapeCity.SharpCells.BooleanWrapper">
+			<summary>
+            Same as boolean but can be also <c>null</c></summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Border">
+			<summary>
+            Represents the border of an object.
+            For internal use only.
+            </summary>
+			<remarks>Most bordered objects (all except for the <c>Range</c> and <c>Style</c> objects) 
+            have a border that�s treated as a single entity, regardless of how many sides it has. 
+            The entire border must be returned as a unit. Use the <c>Border</c> property to return the 
+            <c>Border</c> object for this kind of object. The following example activates the chart sheet named Chart1 
+            places a dashed border around the chart area for the active chart and places a dotted border
+             around the plot area.</remarks>
+		</member>
+		<member name="M:GrapeCity.SharpCells.Border.#ctor(GrapeCity.SharpCells.Borders,GrapeCity.SharpCells.BordersIndex)">
+			<summary>
+            Returns a <c>Border</c> object that represents the border of the object.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Border.Color">
+			<summary>
+            Returns or sets the primary color of the object, as shown in the following table. 
+            Use the <c>RGB</c> function to create a color value. Read/write <c>Color</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Border.ColorIndex">
+			<summary>
+            Returns or sets the color of the border. 
+            </summary>
+			<remarks>The color is specified as an index 
+            value into the current color palette, or as one of the following <c>ColorIndex</c> 
+            constants. Read/write <c>int</c>.</remarks>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Border.LineStyle">
+			<summary>
+            Returns or sets the line style for the border. Read/write <c>LineStyle</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Border.Weight">
+			<summary>
+            Returns or sets the weight of the border. Read/write <c>BorderWeight</c>.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Borders">
+			<summary>
+            A collection of four <c>Border</c> objects that represent the four borders
+             of a <c>Range</c> or <c>Style</c> object.
+            For internal use only.
+            </summary>
+			<remarks>Use the <c>Borders</c> property to return the <c>Borders</c> collection, 
+            which contains all four borders. The following example adds a double border 
+            to cell A1 on worksheet one.</remarks>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Borders.Color">
+			<summary>
+            Returns or sets the primary color of the object, as shown in the following table.
+             Use the <c>RGB</c> function to create a color value. Read/write Color.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Borders.ColorIndex">
+			<summary>
+            Returns or sets the color of all four borders. Returns <c>Null</c> if all four borders 
+            aren't the same color. The color is specified as an index value into the current 
+            color palette, or as one of the following <c>ColorIndex</c> constants. Read/write Int.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Borders.Item(GrapeCity.SharpCells.BordersIndex)">
+			<summary>
+            Returns a <c>Border</c> object that represents one of the borders of either a range of cells or a style.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Colors">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.FileFormat">
+			<summary>
+            Represents fill formatting for a shape. A shape can have a solid, gradient, 
+            texture, pattern, picture, or semi-transparent fill.
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.ShiftDirection">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.HAlign">
+			<summary>
+            The horizontal alignment for an object.
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.VAlign">
+			<summary>
+            The vertical alignment of an object.
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.BordersIndex">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.BorderWeight">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Background">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.BorderLineStyle">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.UnderlineStyle">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Pattern">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.PageOrientation">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.PaperSize">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Font">
+			<summary>
+            Contains the font attributes (font name, font size, color, and so on) for an object.
+            For internal use only.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Font.Bold">
+			<summary>
+				<c>true</c> if the font is bold. Read/write <c>bool</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Font.Color">
+			<summary>
+            Returns or sets the primary color of the object, as shown in the following table.
+            Use the RGB function to create a color value. Read/write <c>Color</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Font.ColorIndex">
+			<summary>
+            Returns or sets the color of the font. The color is specified as an index 
+            value into the current color palette, or as one of the following <c>ColorIndex</c> 
+            constants. Read/write <c>int</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Font.Name">
+			<summary>
+            Returns or sets the name of the object. The name of a <c>Range</c> object is a <c>Name</c> object. 
+            For every other type of object, the name is a string. Read/write <c>string</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Font.Italic">
+			<summary>
+				<c>true</c> if the font style is italic. Read/write <c>bool</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Font.OutlineFont">
+			<summary>
+				<c>true</c> if the font is an outline font. Read/write <c>bool</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Font.Shadow">
+			<summary>
+				<c>true</c> if the font is an outline font. Read/write <c>bool</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Font.Size">
+			<summary>
+				<c>true</c> if the font is an outline font. Read/write <c>bool</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Font.Strikethrough">
+			<summary>
+				<c>true</c> if the font is struck through with a horizontal line. Read/write <c>bool</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Font.Subscript">
+			<summary>
+				<c>true</c> if the font is formatted as subscript. <c>false</c> by default. Read/write <c>bool</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Font.Superscript">
+			<summary>
+				<c>true</c> if the font is formatted as superscript; <c>false</c> by default. Read/write <c>bool</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Font.Underline">
+			<summary>
+            Returns or sets the type of underline applied to the font. Can be one of the following 
+            <c>UnderlineStyle</c> constants. Read/write <c>UnderlineStyle</c>.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Implementation.Biff.Context">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Implementation.Biff.SerializationManager">
+			<summary>
+            Summary description for SerializationManager.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Implementation.Biff.WorkbookContext">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Implementation.Biff.WorkbookReadDirector">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Implementation.Biff.WorkbookReader">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Implementation.Cell">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Implementation.FontTable">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Implementation.IBorders">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Implementation.IFont">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Implementation.IInterior">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Implementation.NameChangedEventHandler">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Implementation.NameChangedEventArgs">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Implementation.NumberFormatTable">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Implementation.SheetData">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Implementation.StorageOfUnrecognizedRecords">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Implementation.WorkbookData">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Implementation.WorksheetData">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Implementation.XfTable">
+			<summary>
+             XfTable may contain duplicate XF entries originally and we are not going 
+             to pack them, since they can be used from different locations. But we will 
+             preserve uniqueness for the later added entries.
+             
+             Compacting the table before the save removes unused entries (since it can not
+             effeciently merge duplicates those existed on reading).
+            
+             For internal use only.
+             </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.IntegerWrapper">
+			<summary>
+            Same as boolean but can be also <c>null</c>.
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Interior">
+			<summary>
+            Represents the interior of an object.
+            For internal use only.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Interior.Color">
+			<summary>
+            Returns or sets the primary color of the object, as shown in the following table. 
+            Use the RGB function to create a color value. Read/write <c>Color</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Interior.ColorIndex">
+			<summary>
+            Returns or sets the color of the interior. 
+            </summary>
+			<remarks>The color is specified as an index value 
+            into the current color palette, or as one of the following <c>ColorIndex</c> constants.
+             Read/write <c>int</c>.</remarks>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Interior.PatternColor">
+			<summary>
+            Returns or sets the color of the interior pattern as an RGB value. Read/write <c>Color</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Interior.PatternColorIndex">
+			<summary>
+            Returns or sets the color of the interior pattern as an index into the current 
+            color palette, or as one of the following <c>ColorIndex</c> constants:
+             <c>ColorIndexAutomatic</c> or <c>ColorIndexNone</c>. Read/write <c>int</c>.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.MSApi.FormatConditions">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.MSApi.Name">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.MSApi.Name.Index">
+			<summary>
+            Returns the index number of the object within the collection of 
+            similar objects. Read-only <c>int</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.MSApi.Name.RefersToRange">
+			<summary>
+            Returns the <c>Range</c> object referred to by a <c>Name</c> object. Read-only.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.MSApi.Name.Visible">
+			<summary>
+            Determines whether the object is visible. Read/write <c>bool</c>.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.SharpCells.MSApi.Name.Delete">
+			<summary>
+            Deletes the object.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.MSApi.Range">
+			<summary>
+            Represents Excel Range.
+            For internal use only.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.SharpCells.MSApi.Range.Address(System.Boolean,System.Boolean,GrapeCity.SharpCells.ReferenceStyle,System.Boolean,GrapeCity.SharpCells.MSApi.Range)">
+			<summary>
+            Returns the range reference in the language of 
+            the macro. Read-only.
+            </summary>
+			<param name="rowAbsolute">
+				<c>true</c> to return the row part of the reference 
+            as an absolute reference. The default value is <c>true</c>.
+            </param>
+			<param name="columnAbsolute">
+				<c>true</c> to return the column part of the reference 
+            as an absolute reference. The default value is <c>true</c>.
+            </param>
+			<param name="ReferenceStyle">
+            Reference style. <c>ReferenceStyle.A1</c> default. Use 
+            <c>ReferenceStyle.A1</c> to return an A1-style reference.
+            <c>ReferenceStyle.R1C1</c> to return an R1C1-style reference. 
+            </param>
+			<param name="External">
+				<c>true</c> to return an external reference. <c>false</c> 
+            to return a local reference. The default value is <c>false</c>.
+            </param>
+			<param name="RelativeTo">
+            If <c>rowAbsolute</c> and <c>columnAbsolute</c> are 
+            <c>false</c>, and <c>ReferenceStyle</c> is 
+            <c>ReferenceStyle.R1C1</c>, you must include a starting 
+            point for the relative reference. This argument is 
+            a <c>Range</c> object that defines the starting point.
+            </param>
+		</member>
+		<member name="P:GrapeCity.SharpCells.MSApi.Range.AllowEdit">
+			<summary>
+				<c>true</c> if the range can be edited on a protected 
+            worksheet. Read-only.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.MSApi.Range.Areas">
+			<summary>
+            Returns an <c>Areas</c> collection that represents all 
+            the ranges in a multiple-area selection. Read-only.
+            </summary>
+			<remarks></remarks>
+		</member>
+		<member name="P:GrapeCity.SharpCells.MSApi.Range.Borders">
+			<summary>
+            Returns a  <c>Borders</c> collection that represents the 
+            borders of a range of cells (including a range defined 
+            
+            as part of a conditional format).
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.MSApi.Range.Column">
+			<summary>
+            Returns the number of the first column in the first area 
+            in the specified range. Read-only.
+            </summary>
+			<remarks>
+            Column A returns 1, column B returns 2, and so on.
+            To return the number of the last column in the range, 
+            use the following expression.
+            <code>
+            myRange.Columns[myRange.Columns.Count].Column
+            </code></remarks>
+		</member>
+		<member name="P:GrapeCity.SharpCells.MSApi.Range.ColumnWidth">
+			<summary>
+            Returns or sets the width of all columns in the specified 
+            range. Read/write.
+            </summary>
+			<remarks>
+            One unit of column width is equal to the width of one 
+            character in the Normal style. For proportional fonts, 
+            the width of the character 0 (zero) is used.
+            Use the <c>Width</c> property to return the width of 
+            a column in points.
+            If all columns in the range have the same width, the 
+            <c>ColumnWidth</c> property returns the width. If 
+            columns in the range have different widths, this 
+            property returns <c>Double.NaN</c>.</remarks>
+		</member>
+		<member name="P:GrapeCity.SharpCells.MSApi.Range.Columns">
+			<summary>
+            Returns a <c>Range</c> object that represents the columns 
+            in the specified range. Read-only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.MSApi.RowsRange">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.SharpCells.MSApi.RowsRange.Collapse">
+			<summary>
+            Collapses this RowsRange.
+            </summary>
+			<remarks>If a child group is expanded, but needs to be hidden due to this collapsing
+            the first row after the child group needs to not be Collapsed so when the 
+            parent is expanded in Excel the child will also be expanded. Similar to ShowDetail.
+            </remarks>
+		</member>
+		<member name="T:GrapeCity.SharpCells.MSApi.WorksheetRange">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Name">
+			<summary>
+            Represents a defined name for a range of cells.
+            For internal use only.
+            </summary>
+			<remarks>Names can be either built-in names � 
+            such as Database, Print_Area, and Auto_Open � or custom names.</remarks>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Name.Index">
+			<summary>
+            Returns the index number of the object within the collection of 
+            similar objects. Read-only <c>int</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Name.RefersToRange">
+			<summary>
+            Returns the <c>Range</c> object referred to by a <c>Name</c> object. Read-only.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Name.Visible">
+			<summary>
+            Determines whether the object is visible. Read/write <c>bool</c>.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.SharpCells.Name.Delete">
+			<summary>
+            Deletes the object.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Names">
+			<summary>
+            A collection of all the <c>Name</c> objects in the application or workbook.
+            For internal use only. 
+            </summary>
+			<remarks>Each <c>Name</c> object represents a defined name for a range of cells. 
+            Names can be either built-in names � such as Database, Print_Area, and 
+            Auto_Open � or custom names.</remarks>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Names.Count">
+			<summary>
+            Returns the number of objects in the collection. Read-only <c>int</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Names.Item(System.Int32)">
+			<summary>
+            Returns a single object from a collection.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Names.Item(System.String)">
+			<summary>
+            Returns a single object from a collection.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.SharpCells.Names.Add(System.String,System.String)">
+			<summary>
+            Defines a new name. Returns a <c>Name</c> object.
+            </summary>
+			<param name="name">Required if <c>NameLocal</c> isn�t specified. The text to use as the 
+            name (in the language of the macro). Names cannot include spaces and cannot
+             look like cell references.</param>
+			<param name="formula"></param>
+			<returns></returns>
+		</member>
+		<member name="M:GrapeCity.SharpCells.Names.Add(System.String,GrapeCity.SharpCells.Range)">
+			<summary>
+            Defines a new name. Returns a Name object.
+            </summary>
+			<param name="name">Required if <c>NameLocal</c> isn�t specified. The text to use as the name (in the 
+            language of the macro). Names cannot include spaces and cannot look like
+             cell references.</param>
+			<param name="range"></param>
+			<returns></returns>
+		</member>
+		<member name="T:GrapeCity.SharpCells.PageSetup">
+			<summary>
+            Represents the page setup description. The <c>PageSetup</c> object contains all page setup 
+            attributes (left margin, bottom margin, paper size, and so on) as properties.
+            For internal use only.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.BlackAndWhite">
+			<summary>
+				<c>true</c> if elements of the document will be printed in black and white. Read/write <c>bool</c>.
+            </summary>
+			<remarks>This property applies only to worksheet pages.</remarks>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.BottomMargin">
+			<summary>
+            Returns or sets the size of the bottom margin, in points. Read/write <c>double</c>.
+            </summary>
+			<remarks>Margins are set or returned in points. Use either the <c>InchesToPoints</c> method 
+            or the <c>CentimetersToPoints</c> method to do the conversion.</remarks>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.CenterFooter">
+			<summary>
+            Returns or sets the center part of the footer. Read/write <c>string</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.CenterHeader">
+			<summary>
+            Returns or sets the center part of the header. Read/write <c>string</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.CenterHorizontally">
+			<summary>
+				<c>true</c> if the sheet is centered horizontally on the page when it's printed.
+             Read/write <c>bool</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.CenterVertically">
+			<summary>
+				<c>true</c> if the sheet is centered vertically on the page when 
+            it's printed. Read/write <c>bool</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.Draft">
+			<summary>
+				<c>true</c> if the sheet will be printed without graphics. Read/write <c>bool</c>.
+            </summary>
+			<remarks>Setting this property to <c>true</c> makes printing faster 
+            (at the expense of not printing graphics).</remarks>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.FirstPageNumber">
+			<summary>
+            Returns or sets the first page number that will be used when this sheet is
+             printed. If <c>Automatic</c>, Microsoft Excel chooses the first page number. 
+             The default is <c>Automatic</c>. Read/write <c>int</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.FitToPagesTall">
+			<summary>
+            Returns or sets the number of pages tall the worksheet will be scaled to when
+             it's printed. Applies only to worksheets. Read/write <c>int</c>.
+            </summary>
+			<remarks>If this property is <c>false</c>, Microsoft Excel scales the worksheet 
+            according to the <c>FitToPagesWide</c> property.If the Zoom property is <c>true</c>, 
+            the <c>FitToPagesTall</c> property is ignored. </remarks>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.FitToPagesWide">
+			<summary>
+            Returns or sets the number of pages wide the worksheet will be scaled to when
+             it's printed. Applies only to worksheets. Read/write <c>int</c>.
+            </summary>
+			<remarks>If this property is <c>false</c>, Microsoft Excel scales the worksheet 
+            according to the <c>FitToPagesTall</c> property.If the Zoom property is <c>true</c>, 
+            the <c>FitToPagesWide</c> property is ignored. </remarks>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.FooterMargin">
+			<summary>
+            Returns or sets the distance from the bottom of the page to the footer, 
+            in points. Read/write <c>double</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.HeaderMargin">
+			<summary>
+            Returns or sets the distance from the top of the page to the header, 
+            in points. Read/write <c>double</c>.
+            </summary>
+			<remarks>Margins are set or returned in points. Use the <c>InchesToPoints</c> 
+            method or the <c>CentimetersToPoints</c> method to convert measurements from 
+            inches or centimeters</remarks>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.LeftFooter">
+			<summary>
+            Returns or sets the left part of the footer. Read/write <c>string</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.LeftHeader">
+			<summary>
+            Returns or sets the left part of the header. Read/write <c>string</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.LeftMargin">
+			<summary>
+            Returns or sets the size of the left margin, in points. Read/write <c>double</c>.
+            </summary>
+			<remarks>Margins are set or returned in points. Use the <c>InchesToPoints</c> method 
+            or the <c>CentimetersToPoints</c> method to convert measurements from 
+            inches or centimeters.</remarks>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.PageOrientation">
+			<summary></summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.PaperSize">
+			<summary>
+            Returns or sets the size of the paper. Read/write <c>PaperSize</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.PrintArea">
+			<summary>
+            Returns or sets the range to be printed, as a string using A1-style 
+            references in the language of the macro. Read/write <c>string</c>.
+            </summary>
+			<remarks>Set this property to <c>false</c> or to the empty string ("")
+             to set the print area to the entire sheet.	This property applies
+              only to worksheet pages.</remarks>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.PrintGridlines">
+			<summary>
+				<c>true</c> if cell gridlines are printed on the page. Applies only to
+             worksheets. Read/write <c>bool</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.PrintHeadings">
+			<summary>
+				<c>true</c> if row and column headings are printed with this page. Applies 
+            only to worksheets. Read/write <c>bool</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.PrintNotes">
+			<summary>
+				<c>true</c> if cell notes are printed as end notes with the sheet. 
+            Applies only to worksheets. Read/write <c>bool</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.PrintQuality">
+			<summary>
+            Use the <c>PrintComments</c> property to print comments as text boxes or end notes.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.RightFooter">
+			<summary>
+            Returns or sets the right part of the footer. Read/write <c>string</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.RightHeader">
+			<summary>
+            Returns or sets the right part of the header. Read/write <c>string</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.RightMargin">
+			<summary>
+            Returns or sets the size of the right margin, in points. Read/write <c>double</c>.
+            </summary>
+			<remarks>
+            Margins are set or returned in points. Use the <c>InchesToPoints</c> method or the 
+            <c>CentimetersToPoints</c> method to convert measurements from inches or centimeters.</remarks>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.TopMargin">
+			<summary>
+            Returns or sets the size of the top margin, in points. Read/write <c>double</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.PageSetup.Zoom">
+			<summary>
+            Returns or sets a percentage (between 10 and 400 percent) by which Microsoft 
+            Excel will scale the worksheet for printing. Applies only to worksheets.
+             Read/write <c>int</c>.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Range">
+			<summary>
+            Represents a cell, a row, a column, a selection of cells containing one or more 
+            contiguous blocks of cells, or a 3-D range.
+            For internal use only.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.SharpCells.Range.Group">
+			<summary>
+            When the <c>Range</c> object represents a single cell in a <c>PivotTable</c> field�s data range,
+             the <c>Group</c> method performs numeric or date-based grouping in that field.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.SharpCells.Range.Merge(System.Boolean)">
+			<summary>
+            Creates a merged cell from the specified <c>Range</c> object.
+            </summary>
+			<param name="across"></param>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.AllowEdit">
+			<summary>
+				<c>true</c> if the range can be edited on a protected 
+            worksheet. Read-only.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.Borders">
+			<summary>
+            Returns a  <c>Borders</c> collection that represents the 
+            borders of a range of cells (including a range defined 
+            as part of a conditional format).
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.Cells">
+			<summary>
+            Returns a <c>Range</c> object that represents the cells in the 
+            specified range. Read-only.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.Column">
+			<summary>
+            Returns the number of the first column in the first area 
+            in the specified range. Read-only.
+            </summary>
+			<remarks>
+            Column A returns 1, column B returns 2, and so on.
+            To return the number of the last column in the range, 
+            use the following expression.
+            <code>
+            myRange.Columns[myRange.Columns.Count].Column
+            </code></remarks>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.ColumnWidth">
+			<summary>
+            Returns or sets the width of all columns in the specified 
+            range. Read/write.
+            </summary>
+			<remarks>
+            One unit of column width is equal to the width of one 
+            character in the Normal style. For proportional fonts, 
+            the width of the character 0 (zero) is used.
+            Use the <c>Width</c> property to return the width of 
+            a column in points.
+            If all columns in the range have the same width, the 
+            <c>ColumnWidth</c> property returns the width. If 
+            columns in the range have different widths, this 
+            property returns <c>Double.NaN</c>.</remarks>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.Columns">
+			<summary>
+            Returns a <c>Range</c> object that represents the columns 
+            in the specified range. Read-only.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.Count">
+			<summary>
+            Returns the number of objects in the collection. Read-only <c>long</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.Font">
+			<summary>
+            Returns a <c>Font</c> object that represents the font of the specified object.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.Formula">
+			<summary>
+            Returns or sets the object's formula in A1-style notation and in the
+             language of the macro. Read/write <c>string</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.FormulaR1C1">
+			<summary>
+            Returns or sets the formula for the object, using R1C1-style notation in 
+            the language of the macro. Read/write <c>string</c> for <c>Range</c> objects.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.Height">
+			<summary>
+            The height of the range. Read-only <c>int</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.HorizontalAlignment">
+			<summary>
+				<c>true</c>if the rows or columns are hidden. The specified range must 
+            span an entire column or row. Read/write <c>HAlign</c>.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.SharpCells.Range.Insert">
+			<summary>
+            Inserts a cell or a range of cells into the worksheet or macro sheet and shifts other cells away to make space.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.SharpCells.Range.InsertRangeOnly(GrapeCity.SharpCells.ShiftDirection)">
+			<summary>
+            Inserts a copy of a cell or a range of cells into the worksheet or macro sheet and shifts other cells away within the affected range.
+            </summary>
+			<param name="shift"></param>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.IndentLevel">
+			<summary>
+            Returns or sets the indent level for the cell or range. Can be an integer 
+            from 0 to 15. Read/write <c>int</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.Interior">
+			<summary>
+            Returns an <c>Interior</c> object that represents the interior of the specified object.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.Item(System.Int32,System.Int32)">
+			<summary>
+            Returns a <c>Range</c> object that represents a range at an offset to the specified range.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.Item(System.String)">
+			<summary>
+            Returns a <c>Range</c> object that represents a range at an offset to the specified range.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.ListHeaderRows">
+			<summary>
+            Returns the number of header rows for the specified range. Read-only <c>long</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.MergeArea">
+			<summary>
+            Returns a <c>Range</c> object that represents the merged range containing the specified
+             cell. If the specified cell isn�t in a merged range, this property returns 
+             the specified cell. Read-only <c>Range</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.NumberFormat">
+			<summary>
+            Returns or sets the format code for the object. Returns <c>Null</c> if all cells in the 
+            specified range don't have the same number format. Read/write <c>string</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.Orientation">
+			<summary>
+            The text orientation. Can be an integer value from  � 90 to 90 degrees.
+             Read/write <c>int</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.OutlineLevel">
+			<summary>
+            Returns or sets the current outline level of the specified row or column. 
+            Read/write <c>int</c>.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.SharpCells.Range.Resize(System.Int32,System.Int32)">
+			<summary>
+            Resizes the specified range. Returns a <c>Range</c> object that represents the 
+            resized range.
+            </summary>
+			<param name="h">The number of rows in the new range. If this argument is omitted,
+             the number of rows in the range remains the same.	</param>
+			<param name="w">The number of columns in the new range. If this argument is 
+            omitted, the number of columns in the range remains the same.</param>
+			<returns>
+				<c>Range</c> object </returns>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.Row">
+			<summary>
+            Returns the number of the first row of the first area in the range. Read-only <c>long.</c></summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.RowHeight">
+			<summary>
+            Returns the height of all the rows in the range specified, measured in points. 
+            Returns <c>null</c> if the rows in the specified range aren�t all the same height. 
+            Read/write <c>double</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.Rows">
+			<summary>
+            For an Application object, returns a Range object that represents all the 
+            rows on the active worksheet. 
+            </summary>
+			<remarks>If the active document isn�t a worksheet, the <c>Rows</c> property fails. 
+            For a <c>Range</c> object, returns a Range object that represents the rows in the 
+            specified range. For a <c>Worksheet</c> object, returns a <c>Range</c> object that represents
+             all the rows on the specified worksheet. Read-only Range object.</remarks>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.ShowDetail">
+			<summary>
+				<c>true</c> if the outline is expanded for the specified range (so that the detail 
+            of the column or row is visible). The specified range must be a single summary 
+            column or row in an outline. Read/write <c>bool</c>.
+            </summary>
+			<remarks>For the <c>PivotItem</c> object (or the Range object if the range is in a 
+            <c>PivotTable</c> report), this property is set to True if the item is showing detail</remarks>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.Style">
+			<summary>
+            Returns a <c>Style</c> object that represents the style of the 
+            specified range. 
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.Text">
+			<summary>
+            Returns or sets the text for the specified object. Read-only 
+            <c>string</c> for the <c>Range</c> object, read/write <c>string</c> for all other objects.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.Value">
+			<summary>
+            Returns or sets the value of the specified range. Read/write <c>object</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.VerticalAlignment">
+			<summary>
+            Returns or sets the vertical alignment of the specified object. Read/write <c>VAlign</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.Width">
+			<summary>
+            The width of the range. Read-only <c>int</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.Worksheet">
+			<summary>
+            Returns a <c>Worksheet</c> object that represents the worksheet 
+            containing the specified range. Read-only.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Range.WrapText">
+			<summary>
+				<c>true</c> if Microsoft Excel wraps the text in the object. Returns <c>null</c> if the specified 
+            range contains some cells that wrap text and other cells that don�t. Read/write <c>BooleanWrapper</c>.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.ReferenceStyle">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.SharpCells.ReferenceStyle.A1">
+			<summary>
+            Use A1 to return an A1-style reference.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.SharpCells.ReferenceStyle.R1C1">
+			<summary>
+            Use R1C1 to return an R1C1-style reference.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Shape">
+			<summary>
+            Summary description for Shape.
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Shapes">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Sheet">
+			<summary>
+            Sheet object.
+            For internal use only.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Sheet.Name">
+			<summary>
+            Returns or sets the name of the object. Read-only <c>string</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Sheet.CodeName">
+			<summary>
+            Returns the code name for the object. Read-only <c>string</c>.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Workbook">
+			<summary>
+            Represents a Microsoft Excel workbook.
+            For internal use only.
+            </summary>
+			<remarks>The <c>Workbook</c> object is a member of the Workbooks collection. 
+            The Workbooks collection contains all the Workbook objects currently 
+            open in Microsoft Excel.</remarks>
+		</member>
+		<member name="M:GrapeCity.SharpCells.Workbook.#ctor(GrapeCity.SharpCells.Implementation.WorkbookData)">
+			<summary>
+            Creates new Workbook.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.SharpCells.Workbook.#ctor(System.String)">
+			<summary>
+            Tries to load Workbook specified by <c>path</c> filename.
+            </summary>
+			<param name="path">File name of Excel file.</param>
+		</member>
+		<member name="M:GrapeCity.SharpCells.Workbook.Save">
+			<summary>
+            Saves changes to the specified workbook.
+            </summary>
+			<remarks>
+            To open a workbook file, use the <c>Open</c> method.
+            To mark a workbook as saved without writing it to 
+            a disk, set its Saved property to <c>true</c>.
+            The first time you save a workbook, use the 
+            <c>SaveAs</c> method to specify a name for the file.
+            </remarks>
+		</member>
+		<member name="M:GrapeCity.SharpCells.Workbook.SaveAs(System.String)">
+			<summary>
+            Saves changes to the workbook in a different file.
+            </summary>
+			<param name="filename">
+            A string that indicates the name of the file to be 
+            saved. You can include a full path; if you don't, 
+            #XL saves the file in the current folder.
+            </param>
+		</member>
+		<member name="M:GrapeCity.SharpCells.Workbook.Open(System.String)">
+			<summary>g
+            Opens a workbook.
+            </summary>
+			<param name="filename">
+            The file name of the workbook to be opened.
+            </param>
+			<remarks>
+            Information contained in current workbook
+            is discarded.
+            </remarks>
+		</member>
+		<member name="M:GrapeCity.SharpCells.Workbook.Close(System.Boolean)">
+			<summary>
+            Closes the workbook.
+            </summary>
+			<param name="saveChanges">
+            Specifies whether changes should be saved.
+            </param>
+		</member>
+		<member name="M:GrapeCity.SharpCells.Workbook.Close">
+			<summary>
+            Closes the workbook saving changes
+            if <c>Saved</c> is <c>false</c>.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.SharpCells.Workbook.DeleteNumberFormat(System.String)">
+			<summary>
+            Deletes a custom number format from the workbook.
+            </summary>
+			<param name="numberFormat">
+            Names the number format to be deleted.
+            </param>
+			<example>
+            This example deletes the number format "000-00-0000"
+            from the active workbook.
+            <code>
+            workbook.DeleteNumberFormat("000-00-0000");
+            </code></example>
+		</member>
+		<member name="M:GrapeCity.SharpCells.Workbook.Protect(System.String,System.Boolean,System.Boolean)">
+			<summary>
+            Protects a workbook so that it cannot be modified.
+            </summary>
+			<param name="password">
+            A string that specifies a case-sensitive password for 
+            the worksheet or workbook. If this argument is <c>null</c>
+            or <code>String.Empty</code>, user can unprotect the 
+            worksheet or workbook without using a password. Otherwise, 
+            user must specify the password to unprotect the worksheet 
+            or workbook.
+            </param>
+			<param name="structure">
+				<c>true</c> to protect the structure of the workbook (the 
+            relative position of the sheets).
+            </param>
+			<param name="windows">
+				<c>True</c> to protect the workbook windows. If this argument is omitted, the windows aren�t protected.
+            </param>
+			<example>
+            This example protects the workbook.
+            <code>
+            workbook.Protect( "password", true, true );
+            </code></example>
+		</member>
+		<member name="M:GrapeCity.SharpCells.Workbook.ProtectSharing(System.String,System.String,System.String,System.Boolean,System.Boolean,System.String)">
+			<summary>
+            Saves the workbook and protects it for sharing.
+            </summary>
+			<param name="filename">A string indicating the name of the saved file. 
+            You can include a full path; if you don�t, Microsoft Excel saves the 
+            file in the current folder.	</param>
+			<param name="password"> A case-sensitive string indicating the protection 
+            password to be given to the file. Should be no longer than 15 characters.</param>
+			<param name="writeResPassword">A string indicating the write-reservation password
+             for this file. If a file is saved with the password and the password isn�t supplied
+              when the file is opened, the file is opened read-only.</param>
+			<param name="readOnlyRecommended">
+				<c>true</c> to display a message when the file is opened, 
+            recommending that the file be opened read-only.	</param>
+			<param name="createBackup">
+				<c>true</c> to create a backup file.</param>
+			<param name="sharingPassword">A string indicating the password to be 
+            used to protect the file for sharing.</param>
+		</member>
+		<member name="M:GrapeCity.SharpCells.Workbook.Unprotect(System.String)">
+			<summary>
+            Removes protection from a sheet or workbook. 
+            This method has no effect if the sheet or 
+            workbook isn't protected.
+            </summary>
+			<param name="password">
+            A string that denotes the case-sensitive 
+            password to use to unprotect the sheet 
+            or workbook.
+            </param>
+		</member>
+		<member name="M:GrapeCity.SharpCells.Workbook.UnprotectSharing(System.String)">
+			<summary>
+            Turns off protection for sharing and saves the 
+            workbook.
+            </summary>
+			<param name="sharingPassword">
+            The workbook password.
+            </param>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Workbook.CodeName">
+			<summary>
+            Returns the code name for the object. Read-only.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Workbook.Colors">
+			<summary>
+            Returns or sets colors in the palette for the 
+            workbook. The palette has 56 entries, each 
+            represented by an <c>Color</c> value. 
+            Read/write.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Workbook.FullName">
+			<summary>
+            Returns the name of the object, including its path 
+            on disk, as a string. Read-only
+            </summary>
+			<remarks>
+            This property is equivalent to the <c>Path</c> 
+            property, followed by the current file system 
+            separator, followed by the <c>Name</c> property.
+            </remarks>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Workbook.HasPassword">
+			<summary>
+				<c>true</c> if the workbook has a protection 
+            password. Read-only.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Workbook.Name">
+			<summary>
+            Returns or sets the name of the workbook. Read-only.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Workbook.Password">
+			<summary>
+            Returns or sets the password that must be supplied 
+            to open the specified workbook. Read/write.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Workbook.Path">
+			<summary>
+            Returns the complete path to the application, 
+            excluding the final separator and name of the 
+            application. Read-only.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Workbook.ReadOnly">
+			<summary>
+				<c>true</c> if the workbook has been opened 
+            as read-only. Read-only.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Workbook.Saved">
+			<summary>
+				<c>true</c> if no changes have been made to 
+            the specified workbook since it was last saved.
+            Read/write.
+            </summary>
+			<remarks>
+            If a workbook has never been saved, its <c>Path</c>
+            property returns an empty string ("").
+            You can set this property to <c>true</c> if you 
+            want to close a modified workbook without saving it.
+            </remarks>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Workbook.Worksheets">
+			<summary>
+            Returns a <c>Worksheets</c> collection that represents 
+            all the worksheets in the specified workbook. Read-only.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Workbook.WritePassword">
+			<summary>
+            Returns or sets a string for the write password of 
+            a workbook. Read/write.
+            </summary>
+			<remarks>
+            The <c>WritePassword</c> property is readable and 
+            returns "********".
+            </remarks>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Workbook.ReadOnlyRecommended">
+			<summary>
+            Gets or sets ReadOnlyRecommended file sharing flag
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Workbook.ProtectedBy">
+			<summary>
+            Gets or sets ProtectedBy
+            </summary>
+		</member>
+		<member name="M:GrapeCity.SharpCells.Workbook.SetWriteProtectPassword(System.String)">
+			<summary>
+            Sets write protection password for the file (not workbook)
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Worksheet">
+			<summary>
+            Represents a worksheet.
+            For internal use only.
+            </summary>
+			<remarks>The <c>Worksheet</c> object is a member of the <c>Worksheets</c> collection. 
+            The <c>Worksheets</c> collection contains all the <c>Worksheet</c> objects in a workbook</remarks>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Worksheet.PageSetup">
+			<summary>
+            Returns a <c>PageSetup</c> object that contains all the page setup settings for the 
+            specified object. Read-only.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Worksheet.Cells">
+			<summary>
+            Returns a <c>Range</c> object that represents all the cells on the worksheet 
+            (not just the cells that are currently in use).  Read-only.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Worksheet.Columns">
+			<summary>
+            Returns a <c>Range</c> object that represents all the columns on the 
+            specified worksheet. Read-only.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Worksheet.Index">
+			<summary>
+            Returns the index number of the object within the collection of 
+            similar objects. Read-only <c>int</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Worksheet.ProtectContents">
+			<summary>
+				<c>true</c> if the contents of the sheet are protected. For a chart, this protects 
+            the entire chart. For a worksheet, this protects the individual cells. Read-only <c>bool</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Worksheet.ProtectionMode">
+			<summary>
+				<c>true</c> if user-interface-only protection is turned on. To turn on user 
+            interface protection, use the <c>Protect</c> method with the <c>UserInterfaceOnly</c>
+             argument set to True. Read-only <c>bool</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Worksheet.Range">
+			<summary>
+            Returns a <c>Range</c> object that represents a cell or a range of cells.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Worksheet.Rows">
+			<summary>
+            For a <c>Worksheet</c> object, returns a Range object that represents all the 
+            rows on the specified worksheet. Read-only Range object./// </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Worksheet.StandardHeight">
+			<summary>
+            Returns the standard (default) height of all the rows in the worksheet,
+             in points. Read-only <c>double</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Worksheet.StandardWidth">
+			<summary>
+            Returns or sets the standard (default) width of all the columns in 
+            the worksheet. Read/write <c>double</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Worksheet.UsedRange">
+			<summary>
+            Returns a <c>Range</c> object that represents the used range on the specified 
+            worksheet. Read-only.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.SharpCells.Worksheet.Protect(System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+			<summary>
+            Protects a worksheet so that it cannot be modified.
+            </summary>
+			<param name="password"> A string that specifies a case-sensitive password for 
+            the worksheet or workbook. If this argument is omitted, you can unprotect the
+             worksheet or workbook without using a password. Otherwise, you must specify
+              the password to unprotect the worksheet or workbook. If you forget the password,
+               you cannot unprotect the worksheet or workbook. It's a good idea to keep a list
+                of your passwords and their corresponding document names in a safe place.</param>
+			<param name="drawingObjects">
+				<c>true</c> to protect shapes. The default value is <c>false</c>.</param>
+			<param name="contents">
+				<c>true</c> to protect contents. For a chart, this protects the entire 
+            chart. For a worksheet, this protects the locked cells. The default value is <c>true</c>.</param>
+			<param name="scenarios">
+				<c>True</c> to protect scenarios. This argument is valid only for
+             worksheets. The default value is <c>True</c>.	</param>
+			<param name="userInterfaceOnly">
+				<c>true</c> to protect the user interface, but not macros. If
+             this argument is omitted, protection applies both to macros and to the user interface.</param>
+			<param name="allowFormattingCells">
+				<c>true</c> allows the user to format any cell on a protected 
+            worksheet.  The default value is <c>false</c>.</param>
+			<param name="allowFormattingColumns">
+				<c>true</c> allows the user to format any column 
+            on a protected worksheet. The default value is <c>false</c>.	</param>
+			<param name="allowFormattingRows">True allows the user to format any row on a protected. 
+            The default value is <c>false</c>.</param>
+			<param name="allowInsertingColumns">
+				<c>true</c> allows the user to insert columns on the 
+            protected worksheet. The default value is <c>false</c>.</param>
+			<param name="allowInsertingRows">
+				<c>true</c> allows the user to insert rows on the
+             protected worksheet. The default value is <c>false</c>.</param>
+			<param name="allowInsertingHyperlinks">
+				<c>true</c> allows the user to insert hyperlinks on 
+            the worksheet. The default value is <c>false</c>.</param>
+			<param name="allowDeletingColumns">
+				<c>true</c> allows the user to delete columns on the protected
+             worksheet, where every cell in the column to be deleted is unlocked. 
+             The default value is <c>false</c>.</param>
+			<param name="allowDeletingRows">
+				<c>true</c> allows the user to delete rows on the protected worksheet, 
+            where every cell in the row to be deleted is unlocked. The default value is <c>false</c>.</param>
+			<param name="allowSorting">
+				<c>true</c> allows the user to sort on the protected worksheet. 
+            Every cell in the sort range must be unlocked or unprotected. The default value is <c>false</c>.</param>
+			<param name="allowFiltering">
+				<c>true</c> allows the user to set filters on the protected 
+            worksheet. Users can change filter criteria but can not enable or disable an auto
+             filter. Users can set filters on an existing auto filter. The default value is <c>false</c>.</param>
+			<param name="allowUsingPivotTables">
+				<c>true</c> allows the user to use pivot table reports on the 
+            protected worksheet. The default value is <c>false</c>.</param>
+		</member>
+		<member name="M:GrapeCity.SharpCells.Worksheet.ResetAllPageBreaks">
+			<summary>
+            Resets all page breaks on the specified worksheet.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.SharpCells.Worksheet.Unprotect(System.String)">
+			<summary>
+            Removes protection from a sheet or workbook. This method has no 
+            effect if the sheet or workbook isn't protected.
+            </summary>
+			<param name="password">A string that denotes the case-sensitive password 
+            to use to unprotect the sheet or workbook. If the sheet or workbook isn't
+             protected with a password, this argument is ignored. If you omit this 
+             argument for a sheet that's protected with a password, you'll be prompted
+              for the password. If you omit this argument for a workbook that's protected 
+              with a password, the method fails.</param>
+		</member>
+		<member name="T:GrapeCity.SharpCells.Worksheets">
+			<summary>
+            A collection of all the <c>Worksheet</c> objects in the specified or active workbook.
+            Each <c>Worksheet</c> object represents a worksheet.
+            For internal use only.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Worksheets.Count">
+			<summary>
+            Returns the number of objects in the collection. Read-only <c>long</c>.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Worksheets.Item(System.Int32)">
+			<summary>
+            Returns a single object from a collection.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.SharpCells.Worksheets.Item(System.String)">
+			<summary>
+            Returns a single object from a collection.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.SharpCells.Worksheets.Add">
+			<summary>
+            Creates a new worksheet, chart, or macro sheet. The new worksheet
+             becomes the active sheet.
+            </summary>
+			<returns>new worksheet</returns>
+		</member>
+		<member name="T:GrapeCity.CompoundDocument.IStorage">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.CompoundDocument.Storage">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.ActiveReports.Export.Excel.DDR.Core.ExcelWrappers.ExcelStyleConverter">
+			<summary>
+            Allows to convert the style of Range to the internal representation and vice versa.
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.ActiveReports.Export.Excel.Page.FileFormat">
+			<summary>
+            Specifies the output format of Excel document.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.FileFormat.Xls">
+			<summary>
+            Excel BIFF format.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.FileFormat.Xlsx">
+			<summary>
+            Excel Open XML format.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.ActiveReports.Export.Excel.Page.OpenXmlStandard">
+			<summary>
+            Specifies the level of Open XML document conformance on exporting with Xlsx file format.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.OpenXmlStandard.Strict">
+			<summary>
+            ISO/IEC 29500 Strict.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.OpenXmlStandard.Transitional">
+			<summary>
+            ISO/IEC 29500 Transitional.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.ActiveReports.Export.Excel.Page.ExcelExport">
+			<summary>
+            Provides Rdl report export to Excel (xls or xlsx) format.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.ActiveReports.Export.Excel.Page.ExcelExport.Export(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.IO.Stream,GrapeCity.ActiveReports.Export.Excel.Page.ExcelExportSettings)">
+			<summary>
+            Exports <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport" /> to Excel.
+            </summary>
+			<param name="report">Report's rendering tree to be exported.</param>
+			<param name="stream">Output stream</param>
+			<param name="settings">Optional export settings.</param>
+		</member>
+		<member name="M:GrapeCity.ActiveReports.Export.Excel.Page.ExcelExport.Export(GrapeCity.ActiveReports.Extensibility.Layout.ILayoutTree,System.IO.Stream,GrapeCity.ActiveReports.Export.Excel.Page.ExcelExportSettings)">
+			<summary>
+            Exports give report represented by its LayoutTree to Excel (xls or xlsx0 format.
+            </summary>
+			<param name="layoutTree">Reports layout tree to be exported.</param>
+			<param name="stream">Output stream.</param>
+			<param name="settings"></param>
+		</member>
+		<member name="M:GrapeCity.ActiveReports.Export.Excel.Page.ExcelExportSettings.#ctor">
+			<summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Export.Excel.Page.ExcelExportSettings" /> class.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.ActiveReports.Export.Excel.Page.ExcelExportSettings.#ctor(System.Collections.Specialized.NameValueCollection)">
+			<summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Export.Excel.Page.ExcelExportSettings" /> class.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelExportSettings.UseCompression">
+			<summary>
+            Gets or sets the value indicating should compression be used on exporting with Xlsx file format. True by default.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelExportSettings.OutputFormat">
+			<summary>
+            Specifies excel output format.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelExportSettings.MultiSheet">
+			<summary>
+            Indicates whether to generate single-sheet or multisheet document.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelExportSettings.SheetName">
+			<summary>
+             Sets or returns a value indicating the name of sheet. <b>Sheet</b> is default.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelExportSettings.UseDefaultPalette">
+			<summary>
+            Sets or returns whether export document with Excel default palette.
+            </summary>
+			<remarks>
+            Setting this value to true, application will use the color which is in default palette and is closest to pre-defined custom color of control's forecolor and backcolor.
+            </remarks>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelExportSettings.PageSettings">
+			<summary>
+            Page info to be written in excel output.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelExportSettings.LayoutPageHeight">
+			<summary>
+            Specifies distance between top edge of page in output file. If 0, then page height well be taken from ILayoutPage.Height for each page.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelExportSettings.LayoutMode">
+			<summary>
+            Gets or sets the mode to use when rendering to html
+            </summary>
+			<value>A<see cref="T:GrapeCity.ActiveReports.Export.Excel.Page.LayoutMode" /> indicating the rendering mode to use.</value>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelExportSettings.EnableToggles">
+			<summary>
+            Specifies whether to export toggles from table details or groups to collapsible rows.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelExportSettings.RightToLeft">
+			<summary>
+            Show sheets right to left. Content will not be mirrored.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.ActiveReports.Export.Excel.Page.LayoutMode">
+			<summary>
+            Layout modes of the excel rendering.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.LayoutMode.Galley">
+			<summary>
+            The report will be rendered in Xls/Xlsx with one page header, one page footer (if they exist) and the report body will be rendered in one large section.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.LayoutMode.Paginated">
+			<summary>
+            The report will be rendered in Xls/Xlsx with a page head and page footer for each page (if they exist) and the positions will be determined by the report's page height.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.ActiveReports.Export.Excel.Page.PageOrientation">
+			<summary>
+            Valid paper orientation values.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PageOrientation.Default">
+			<summary>
+            Default printer orientation.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PageOrientation.Portrait">
+			<summary>
+            Portrait orientation.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PageOrientation.Landscape">
+			<summary>
+            Landscape orientation.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes">
+			<summary>
+            Valid paper size values.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Default">
+			<summary>
+            The paper size is defined by the user.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Letter">
+			<summary>
+            Letter paper (8.5 in. by 11 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.LetterSmall">
+			<summary>
+            Letter small paper (8.5 in. by 11 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Tabloid">
+			<summary>
+            Tabloid paper (11 in. by 17 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Ledger">
+			<summary>
+            Ledger paper (17 in. by 11 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Legal">
+			<summary>
+            Legal paper (8.5 in. by 14 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Statement">
+			<summary>
+            Statement paper (5.5 in. by 8.5 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Executive">
+			<summary>
+            Executive paper (7.25 in. by 10.5 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.A3">
+			<summary>
+            A3 paper (297 mm by 420 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.A4">
+			<summary>
+            A4 paper (210 mm by 297 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.A4Small">
+			<summary>
+            A4 small paper (210 mm by 297 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.A5">
+			<summary>
+            A5 paper (148 mm by 210 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.B4">
+			<summary>
+            B4 paper (250 mm by 353 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.B5">
+			<summary>
+            B5 paper (176 mm by 250 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Folio">
+			<summary>
+            Folio paper (8.5 in. by 13 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Quarto">
+			<summary>
+            Quarto paper (215 mm by 275 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Standard10x14">
+			<summary>
+            Standard paper (10 in. by 14 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Standard11x17">
+			<summary>
+            Standard paper (11 in. by 17 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Note">
+			<summary>
+            Note paper (8.5 in. by 11 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Number9Envelope">
+			<summary>
+            #9 envelope (3.875 in. by 8.875 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Number10Envelope">
+			<summary>
+            #10 envelope (4.125 in. by 9.5 in.)
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Number11Envelope">
+			<summary>
+            #11 envelope (4.5 in. by 10.375 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Number12Envelope">
+			<summary>
+            #12 envelope (4.75 in. by 11 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Number14Envelope">
+			<summary>
+            #14 envelope (5 in. by 11.5 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.CSheet">
+			<summary>
+            C paper (17 in. by 22 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.DSheet">
+			<summary>
+            D paper (22 in. by 34 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.ESheet">
+			<summary>
+            E paper (34 in. by 44 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.DLEnvelope">
+			<summary>
+            DL envelope (110 mm by 220 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.C5Envelope">
+			<summary>
+            C5 envelope (162 mm by 229 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.C3Envelope">
+			<summary>
+            C3 envelope (324 mm by 458 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.C4Envelope">
+			<summary>
+            C4 envelope (229 mm by 324 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.C6Envelope">
+			<summary>
+            C6 envelope (114 mm by 162 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.C65Envelope">
+			<summary>
+            C65 envelope (114 mm by 229 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.B4Envelope">
+			<summary>
+            B4 envelope (250 mm by 353 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.B5Envelope">
+			<summary>
+            B5 envelope (176 mm by 250 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.B6Envelope">
+			<summary>
+            B6 envelope (176 mm by 125 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.ItalyEnvelope">
+			<summary>
+            Italy envelope (110 mm by 230 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.MonarchEnvelope">
+			<summary>
+            Monarch envelope (3.875 in. by 7.5 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.PersonalEnvelope">
+			<summary>
+            6 3/4 envelope (3.625 in. by 6.5 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.USStandardFanfold">
+			<summary>
+            US standard fanfold (14.875 in. by 11 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.GermanStandardFanfold">
+			<summary>
+            German standard fanfold (8.5 in. by 12 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.GermanLegalFanfold">
+			<summary>
+            German legal fanfold (8.5 in. by 13 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.IsoB4">
+			<summary>
+            ISO B4 (250 mm by 353 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.JapanesePostcard">
+			<summary>
+            Japanese postcard (100 mm by 148 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Standard9x11">
+			<summary>
+            Standard paper (9 in. by 11 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Standard10x11">
+			<summary>
+            Standard paper (10 in. by 11 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Standard15x11">
+			<summary>
+            Standard paper (15 in. by 11 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.InviteEnvelope">
+			<summary>
+            Invitation envelope (220 mm by 220 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.LetterExtra">
+			<summary>
+            Letter extra paper (9.275 in. by 12 in.). This value is specific to the PostScript
+            driver and is used only by Linotronic printers in order to conserve paper.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.LegalExtra">
+			<summary>
+            Legal extra paper (9.275 in. by 15 in.). This value is specific to the PostScript
+            driver and is used only by Linotronic printers in order to conserve paper.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.TabloidExtra">
+			<summary>
+            Tabloid extra paper (11.69 in. by 18 in.). This value is specific to the
+            PostScript driver and is used only by Linotronic printers in order to conserve
+            paper.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.A4Extra">
+			<summary>
+            A4 extra paper (236 mm by 322 mm). This value is specific to the PostScript
+            driver and is used only by Linotronic printers to help save paper.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.LetterTransverse">
+			<summary>
+            Letter transverse paper (8.275 in. by 11 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.A4Transverse">
+			<summary>
+            A4 transverse paper (210 mm by 297 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.LetterExtraTransverse">
+			<summary>
+            Letter extra transverse paper (9.275 in. by 12 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.APlus">
+			<summary>
+            SuperA/SuperA/A4 paper (227 mm by 356 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.BPlus">
+			<summary>
+            SuperB/SuperB/A3 paper (305 mm by 487 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.LetterPlus">
+			<summary>
+            Letter plus paper (8.5 in. by 12.69 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.A4Plus">
+			<summary>
+            A4 plus paper (210 mm by 330 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.A5Transverse">
+			<summary>
+            A5 transverse paper (148 mm by 210 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.B5Transverse">
+			<summary>
+            JIS B5 transverse paper (182 mm by 257 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.A3Extra">
+			<summary>
+            A3 extra paper (322 mm by 445 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.A5Extra">
+			<summary>
+            A5 extra paper (174 mm by 235 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.B5Extra">
+			<summary>
+            ISO B5 extra paper (201 mm by 276 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.A2">
+			<summary>
+            A2 paper (420 mm by 594 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.A3Transverse">
+			<summary>
+            A3 transverse paper (297 mm by 420 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.A3ExtraTransverse">
+			<summary>
+            A3 extra transverse paper (322 mm by 445 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.JapaneseDoublePostcard">
+			<summary>
+            Japanese double postcard (200 mm by 148 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.A6">
+			<summary>
+            A6 paper (105 mm by 148 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.JapaneseEnvelopeKakuNumber2">
+			<summary>
+            Japanese Kaku #2 envelope.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.JapaneseEnvelopeKakuNumber3">
+			<summary>
+            Japanese Kaku #3 envelope.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.JapaneseEnvelopeChouNumber3">
+			<summary>
+            Japanese Chou #3 envelope.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.JapaneseEnvelopeChouNumber4">
+			<summary>
+            Japanese Chou #4 envelope.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.LetterRotated">
+			<summary>
+            Letter rotated paper (11 in. by 8.5 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.A3Rotated">
+			<summary>
+            A3 rotated paper (420 mm by 297 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.A4Rotated">
+			<summary>
+            A4 rotated paper (297 mm by 210 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.A5Rotated">
+			<summary>
+            A5 rotated paper (210 mm by 148 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.B4JisRotated">
+			<summary>
+            JIS B4 rotated paper (364 mm by 257 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.B5JisRotated">
+			<summary>
+            JIS B5 rotated paper (257 mm by 182 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.JapanesePostcardRotated">
+			<summary>
+            Japanese rotated postcard (148 mm by 100 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.JapaneseDoublePostcardRotated">
+			<summary>
+            Japanese rotated double postcard (148 mm by 200 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.A6Rotated">
+			<summary>
+            A6 rotated paper (148 mm by 105 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.JapaneseEnvelopeKakuNumber2Rotated">
+			<summary>
+            Japanese rotated Kaku #2 envelope.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.JapaneseEnvelopeKakuNumber3Rotated">
+			<summary>
+            Japanese rotated Kaku #3 envelope.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.JapaneseEnvelopeChouNumber3Rotated">
+			<summary>
+            Japanese rotated Chou #3 envelope.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.JapaneseEnvelopeChouNumber4Rotated">
+			<summary>
+            Japanese rotated Chou #4 envelope.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.B6Jis">
+			<summary>
+            JIS B6 paper (128 mm by 182 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.B6JisRotated">
+			<summary>
+            JIS B6 rotated paper (182 mm by 128 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Standard12x11">
+			<summary>
+            Standard paper (12 in. by 11 in.).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.JapaneseEnvelopeYouNumber4">
+			<summary>
+            Japanese You #4 envelope.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.JapaneseEnvelopeYouNumber4Rotated">
+			<summary>
+            Japanese You #4 rotated envelope.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Prc16K">
+			<summary>
+            People's Republic of China 16K paper (146 mm by 215 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Prc32K">
+			<summary>
+            People's Republic of China 32K paper (97 mm by 151 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Prc32KBig">
+			<summary>
+            People's Republic of China 32K big paper (97 mm by 151 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.PrcEnvelopeNumber1">
+			<summary>
+            People's Republic of China #1 envelope (102 mm by 165 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.PrcEnvelopeNumber2">
+			<summary>
+            People's Republic of China #2 envelope (102 mm by 176 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.PrcEnvelopeNumber3">
+			<summary>
+            People's Republic of China #3 envelope (125 mm by 176 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.PrcEnvelopeNumber4">
+			<summary>
+            People's Republic of China #4 envelope (110 mm by 208 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.PrcEnvelopeNumber5">
+			<summary>
+            People's Republic of China #5 envelope (110 mm by 220 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.PrcEnvelopeNumber6">
+			<summary>
+            People's Republic of China #6 envelope (120 mm by 230 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.PrcEnvelopeNumber7">
+			<summary>
+            People's Republic of China #7 envelope (160 mm by 230 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.PrcEnvelopeNumber8">
+			<summary>
+            People's Republic of China #8 envelope (120 mm by 309 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.PrcEnvelopeNumber9">
+			<summary>
+            People's Republic of China #9 envelope (229 mm by 324 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.PrcEnvelopeNumber10">
+			<summary>
+            People's Republic of China #10 envelope (324 mm by 458 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Prc16KRotated">
+			<summary>
+            People's Republic of China 16K rotated paper (146 mm by 215 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Prc32KRotated">
+			<summary>
+            People's Republic of China 32K rotated paper (97 mm by 151 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.Prc32KBigRotated">
+			<summary>
+            People's Republic of China 32K big rotated paper (97 mm by 151 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.PrcEnvelopeNumber1Rotated">
+			<summary>
+            People's Republic of China #1 rotated envelope (165 mm by 102 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.PrcEnvelopeNumber2Rotated">
+			<summary>
+            People's Republic of China #2 rotated envelope (176 mm by 102 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.PrcEnvelopeNumber3Rotated">
+			<summary>
+            People's Republic of China #3 rotated envelope (176 mm by 125 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.PrcEnvelopeNumber4Rotated">
+			<summary>
+            People's Republic of China #4 rotated envelope (208 mm by 110 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.PrcEnvelopeNumber5Rotated">
+			<summary>
+            People's Republic of China Envelope #5 rotated envelope (220 mm by 110 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.PrcEnvelopeNumber6Rotated">
+			<summary>
+            People's Republic of China #6 rotated envelope (230 mm by 120 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.PrcEnvelopeNumber7Rotated">
+			<summary>
+            People's Republic of China #7 rotated envelope (230 mm by 160 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.PrcEnvelopeNumber8Rotated">
+			<summary>
+            People's Republic of China #8 rotated envelope (309 mm by 120 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.PrcEnvelopeNumber9Rotated">
+			<summary>
+            People's Republic of China #9 rotated envelope (324 mm by 229 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.PaperSizes.PrcEnvelopeNumber10Rotated">
+			<summary>
+            People's Republic of China #10 rotated envelope (458 mm by 324 mm).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelOutputFormat.Biff">
+			<summary>
+            Excel BIFF format (xls).
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelOutputFormat.OpenXmlTransitional">
+			<summary>
+            ISO/IEC 29500 Transitional.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelOutputFormat.OpenXmlStrict">
+			<summary>
+            ISO/IEC 29500 Strict.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelSecuritySettings.ProtectedBy">
+			<summary>
+            Gets or sets the User Name responsible to password protect the excel spreadsheet. Max 52 chars.  
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.Page.ExcelSecuritySettings.WritePassword">
+			<summary>
+            Gets or sets the write password of the Excel file. Maximum 15 chars.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.ActiveReports.Export.Excel.Page.ExcelSecuritySettings.Password">
+			<summary>
+            Gets or sets the password which can be entered to permit to open Excel document.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.ActiveReports.Export.Excel.Page.ExcelSecuritySettings.ReadOnlyRecommended">
+			<summary>
+            Gets or sets the value to indicate if the Excel file was saved as read only recommended.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.ActiveReports.Export.Excel.OpenXmlTransitionalPatcher">
+			<summary>
+            Patch the document according to the Transitional standard.
+            </summary>
+			<remarks>
+            Refer to case 166868. The OpenXML sdk saves the document in Strict standard. 
+            The Google Docs (Google Drive) does not support Strict standard fully.
+            So need convert some files in the document according to the Transitional standard.
+            It does not convert the document to Transitional standard fully. 
+            Just make the necessary conversion to make Google Docs accept the document.
+            </remarks>
+		</member>
+		<member name="T:GrapeCity.ActiveReports.Export.Excel.OpenXmlTransitionalPatchSettings">
+			<summary>
+            Patch settings.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.OpenXmlTransitionalPatchSettings.PatchRelationships">
+			<summary>
+            Patch the ".rels" relationships file in the "_rels" folder.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.OpenXmlTransitionalPatchSettings.PatchContentType">
+			<summary>
+            Patch the "[Content_Types].xml", add missing contents.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.OpenXmlTransitionalPatchSettings.PatchWorkbook">
+			<summary>
+            Patch the "xl/workbook.xml", move namespace declarations.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.ActiveReports.Export.Excel.OpenXmlTransitionalPatchSettings.All">
+			<summary>
+            Gets the OpenXmlPatchSettings object with all settings true.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SpreadBuilder.EncryptionTools">
+			<summary>
+            The tool class for encryption. Can find the spec in [MS-OFFCRYPTO].
+            </summary>
+		</member>
+		<member name="M:GrapeCity.SpreadBuilder.EncryptionTools.GenerateVerifier(System.Byte[],System.Byte[]@,System.Byte[]@)">
+			<summary>
+            Generate the verifier and verifierHash.
+            </summary>
+			<param name="key">A bytes indicates the key.</param>
+			<param name="verifier">Output the verifier as a bytes.</param>
+			<param name="verifierHash">Output the verifier hash as a bytes.</param>
+		</member>
+		<member name="M:GrapeCity.SpreadBuilder.EncryptionTools.GetRC4Key(System.Byte[],System.String,System.UInt32)">
+			<summary>
+            Get RC4 key.
+            </summary>
+			<param name="salt">A bytes indicates salt.</param>
+			<param name="password">Password.</param>
+			<param name="blockNo">The block number. The block size is 1024.</param>
+			<returns>RC4 key.</returns>
+		</member>
+		<member name="T:GrapeCity.SpreadBuilder.Biff8RC4Encryption">
+			<summary>
+            Implement biff8 rc4 encryption. Can find the spec in [MS-OFFCRYPTO].
+            </summary>
+		</member>
+		<member name="M:GrapeCity.SpreadBuilder.Biff8RC4Encryption.#ctor(System.IO.BinaryWriter,System.String,System.Byte[])">
+			<summary>
+            Create a  Biff8RC4Encryption class.
+            </summary>
+			<param name="bw">The BinaryWriter which contains input stream.</param>
+			<param name="password">A string indicates the password.</param>
+			<param name="salt">The salt of password.</param>
+		</member>
+		<member name="M:GrapeCity.SpreadBuilder.Biff8RC4Encryption.EncryptionBiff8Stream">
+			<summary>
+            Encrypt the biff8 stream.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.SpreadBuilder.XORObfuscation">
+			<summary>
+            Several records (Password (section 2.4.191), FileSharing (section 2.4.118), 
+            Prot4RevPass (section 2.4.206), FeatProtection (section 2.5.124), and 
+            FilePass (section 2.4.117)) use a password verifier to provide a locking and 
+            unlocking system for viewing or editing parts of the workbook. This password verifier 
+            is used to prevent accidental editing, and is not designed to be used as a security 
+            feature. 
+            </summary>
+		</member>
+		<member name="M:GrapeCity.SpreadBuilder.XORObfuscation.CreatePasswordVerifier1(System.String)">
+			<summary>
+            This procedure specifies how a 16-bit password verifier is obtained 
+            from a password string. The password verifier is used in XOR 
+            obfuscation, as well as for document write protection.(the XOR obfuscation 
+            algorithm specified in [MS-OFFCRYPTO], 2.3.7.1, Binary Document Password 
+            Verifier Derivation Method 1)
+            </summary>
+			<param name="pwd">A string indicates password.</param>
+			<returns>Get the hash code of the password.</returns>
+		</member>
+		<member name="T:GrapeCity.SpreadBuilder.BiffRecordID">
+			<summary>
+            Enum containing all BIFF Record Identifiers (a.k.a. record numbers, Codes, OpCodes, Identifiers, whatever you want to call them).
+            </summary>
+		</member>
+	</members>
+</doc>

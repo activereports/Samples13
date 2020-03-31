@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{40126FB0-44EC-4580-AE8F-E10251CC9328}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <AssemblyName>GrapeCity.ActiveReports.Calendar.Component</AssemblyName>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GrapeCity.ActiveReports.Calendar</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <SignAssembly>true</SignAssembly>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gcef.Data.DataEngine">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Gcef.Data.ExpressionInfo">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Gcef.Data.VBFunctionLib">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Design.Win">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Diagnostics">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Document">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Drawing.Gdi">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Rdl">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Rendering">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Viewer.Win">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Components\Calendar\Action.cs" />
+    <Compile Include="Components\Calendar\Appointments.cs" />
+    <Compile Include="Components\Calendar\CalendarData.cs" />
+    <Compile Include="Components\Calendar\CalendarDataRegion.cs" />
+    <Compile Include="Components\DataRegionBase.cs" />
+    <Compile Include="Components\Calendar\Drillthrough.cs" />
+    <Compile Include="Components\Calendar\Enums.cs" />
+    <Compile Include="Components\Calendar\ICalendar.cs" />
+    <Compile Include="Components\Calendar\ImageStyle.cs" />
+    <Compile Include="Components\Calendar\LineStyle.cs" />
+    <Compile Include="Components\Calendar\MonthInfo.cs" />
+    <Compile Include="Components\ReportItemBase.cs" />
+    <Compile Include="Components\Calendar\TextStyle.cs" />
+    <Compile Include="EvaluatorService.cs" />
+    <Compile Include="Tools\Utils.cs" />
+    <Compile Include="Layout\Calendar\CalendarContentRange.cs" />
+    <Compile Include="Layout\Calendar\CalendarLayoutManager.cs" />
+    <Compile Include="Rendering\Calendar\CalendarRenderer.cs" />
+    <Compile Include="Rendering\CalendarCulture.cs" />
+    <Compile Include="Rendering\ImageLocatorService.cs" />
+    <Compile Include="Rendering\RenderUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

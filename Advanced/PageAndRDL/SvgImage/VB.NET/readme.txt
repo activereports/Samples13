@@ -1,0 +1,1 @@
+﻿For running SvgImage sample set  TestViewer or TestDesignerPro as startup project.

@@ -1,0 +1,78 @@
+.viewer-container-back-button, .viewer-container-app-header {
+	background-color: #26A69A;
+	color: #FFF;
+}
+
+.theme-ars .viewer-container-back-button, .theme-ars .viewer-container-app-header {
+	background-color: #FB6107;
+}
+
+.theme-blue .viewer-container-back-button, .theme-blue .viewer-container-app-header {
+	background-color: #336699;
+}
+
+.theme-dark-forest .viewer-container-back-button, .theme-dark-forest .viewer-container-app-header {
+	background-color: #5b9279;
+}
+
+.theme-forest .viewer-container-back-button, .theme-forest .viewer-container-app-header {
+	background-color: #5b9279;
+}
+
+.theme-light .viewer-container-back-button, .theme-light .viewer-container-app-header {
+	background-color: #26A69A;
+}
+
+.theme-red .viewer-container-back-button, .theme-red .viewer-container-app-header {
+	background-color: #912f40;
+}
+
+.viewer-container-back-button {
+	padding: 0;
+	margin-right: 5px;
+	border: none;
+	width: 50px;
+	height: 100%;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.viewer-container-back-button i {
+	font-size: 24px;
+}
+.viewer-container-back-button:hover {
+	background-color: rgba(0, 0, 0, 0.12);
+}
+
+.viewer-container-app-header {
+	display: flex;
+	position: fixed;
+	flex-wrap: nowrap;
+	top: 0;
+	left: 0;
+	height: 50px;
+	width: 100%;
+	line-height: 45px;
+	font-size: 16px;
+}
+
+.viewer-container-header-name-panel {
+	position: absolute;
+	left: 50%;
+}
+
+.viewer-container-header-name-panel span {
+	position: relative;
+	left: -50%;
+}
+
+.viewer-container-iframe-container {
+	padding-top: 50px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.viewer-container-iframe-container iframe {
+	width: 100%;
+	height: 100%;
+	border: none;
+}

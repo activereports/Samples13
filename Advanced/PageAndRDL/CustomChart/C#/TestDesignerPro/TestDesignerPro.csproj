@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DC3A9244-34D3-4381-918B-2B7B1AD5033F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GrapeCity.ActiveReports.Samples.Radar</RootNamespace>
+    <AssemblyName>TestDesignerPro</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>GrapeCity.ActiveReports.Samples.Radar.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GrapeCity.ActiveReports">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Design.Win">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Document">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Rdl">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Viewer.Win">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DesignerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesignerForm.Designer.cs">
+      <DependentUpon>DesignerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DesignerForm.resx">
+      <DependentUpon>DesignerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RadarChart\RadarChart.csproj">
+      <Project>{c1ae59c7-0b4d-4354-9d5c-00bfacf100a9}</Project>
+      <Name>RadarChart</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RadarDesigner\RadarDesigner.csproj">
+      <Project>{f2344bf6-3ef1-4b59-a738-6dfe66343413}</Project>
+      <Name>RadarDesigner</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\cmdnewreport.png" />
+    <None Include="Resources\cmdopen.png" />
+    <None Include="Resources\cmdsave.png" />
+    <None Include="Resources\cmdsaveas.png" />
+    <None Include="Resources\GroupEditorHide.png" />
+    <None Include="Resources\GroupEditorShow.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(ProjectDir)Grapecity.ActiveReports.config" "$(TargetDir)Grapecity.ActiveReports.config"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

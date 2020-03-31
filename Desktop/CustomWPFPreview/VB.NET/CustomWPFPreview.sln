@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CustomWPFPreview", "CustomWpfPreview\CustomWPFPreview.vbproj", "{6FDA8A07-4B8D-43D8-97BB-E9A031FCB378}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FDA8A07-4B8D-43D8-97BB-E9A031FCB378}.Debug|x86.ActiveCfg = Debug|x86
+		{6FDA8A07-4B8D-43D8-97BB-E9A031FCB378}.Debug|x86.Build.0 = Debug|x86
+		{6FDA8A07-4B8D-43D8-97BB-E9A031FCB378}.Release|x86.ActiveCfg = Release|x86
+		{6FDA8A07-4B8D-43D8-97BB-E9A031FCB378}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1977AF70-6287-43CD-861A-EE2C90ED0931}
+	EndGlobalSection
+EndGlobal

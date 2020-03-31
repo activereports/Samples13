@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+	<assembly>
+		<name>GrapeCity.ActiveReports.Export.Svg</name>
+	</assembly>
+	<members>
+		<member name="T:AssemblyNames">
+			<summary>
+            Contains strong assembly names and such
+            </summary>
+		</member>
+		<member name="T:GrapeCity.ActiveReports.Export.Svg.Page.SvgRenderersFactory">
+			<summary>
+            Factory with SVG based image renderer to render charts and CRIs to SVG.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.ActiveReports.Export.Svg.Page.SvgRenderersFactory.EmbeddedImage">
+			<summary>
+            True is image should be generated to allow to embed it to HTML.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.ActiveReports.Export.Svg.Page.SvgRenderingExtension">
+			<summary>
+				<see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.IRenderingExtension" /> implementation used to create a SVG image. For internal Use Only.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.ActiveReports.Export.Svg.Page.SvgRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider,System.Collections.Specialized.NameValueCollection,GrapeCity.ActiveReports.Extensibility.Layout.ILayoutTree)">
+			<summary>
+            For internal use only!
+            </summary>
+		</member>
+		<member name="T:GrapeCity.ActiveReports.Export.Svg.Page.Settings">
+			<summary>
+            SVG settings. For internal use only.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.ActiveReports.Export.Svg.Page.Settings.#ctor">
+			<summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Export.Svg.Page.Settings" /> class.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.ActiveReports.Export.Svg.Page.Settings.#ctor(System.Collections.Specialized.NameValueCollection)">
+			<summary>
+            Initializes a new instance of the <see cref="!:SvgSettings" /> class.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.ActiveReports.Export.Svg.Page.Settings.CompressAttributes">
+			<summary>
+            Compress attributes to optimize XML size.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.ActiveReports.Export.Svg.Page.Settings.EmbedImages">
+			<summary>
+            Embed images.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.ActiveReports.Export.Svg.Page.Settings.Title">
+			<summary>
+            SVG document title.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.ActiveReports.Export.Svg.Page.Settings.IncludePageMargins">
+			<summary>
+            Drop pages margins or not.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.ActiveReports.Export.Svg.Page.Settings.InteractivitySupport">
+			<summary>
+            Renders interactivity as SGV elements or as "interactivity areas" with special custom attributes.
+            So customer can listen click event and check for attributes.
+            <remarks><html><title>test</title><script type="text/javascript">
+            window.addEventListener("load", function() {
+              var svg = document.getElementsByTagName("svg")[0];
+              svg.addEventListener("click", function(evt)
+              {
+                if (!evt.target || !evt.target.attributes || !evt.target.attributes["arsvg:data-action-type"])
+                  return;
+                if (evt.target.attributes["gcsvg:data-action-type"].value === "hyperlink")
+            	  alert(evt.target.attributes["gcsvg:data-action-data"].value);
+              });
+            });
+            </script><body><svg width="6cm" height="5cm" viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:arsvg="http://activereports.grapecity.com/2017/svg"><circle cx="300" cy="225" r="100" fill="red" style="cursor:pointer" arsvg:data-action-type="hyperlink" arsvg:data-action-page="1" arsvg:data-action-data="http://google.com" /></svg></body></html></remarks></summary>
+		</member>
+		<member name="P:GrapeCity.ActiveReports.Export.Svg.Page.Settings.PageSettings">
+			<summary>
+            Page settings.
+            </summary>
+		</member>
+	</members>
+</doc>

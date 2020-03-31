@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+	<assembly>
+		<name>GrapeCity.ActiveReports.Core.Export.Text.Page</name>
+	</assembly>
+	<members>
+		<member name="T:GrapeCity.ActiveReports.Export.Text.Page.CsvExport">
+			<summary>
+            Provides export of rendered Page and RDL reports to CSV format.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.ActiveReports.Export.Text.Page.CsvExport.Export(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.IO.TextWriter,GrapeCity.ActiveReports.Export.Text.Page.CsvExportSettings)">
+			<summary>
+            Writes the given <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport" /> object to the given <see cref="T:System.IO.StreamWriter" /> in CSV format. 
+            </summary>
+			<param name="report">The report to be exported.</param>
+			<param name="writer">The StreamWriter to be report exported to.</param>
+			<param name="settings">Optional export settings.</param>
+		</member>
+		<member name="T:GrapeCity.ActiveReports.Export.Text.Page.CsvExportSettings">
+			<summary>
+            CsvRenderingExtension settings class
+            </summary>
+		</member>
+		<member name="M:GrapeCity.ActiveReports.Export.Text.Page.CsvExportSettings.#ctor">
+			<summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Export.Text.Page.CsvExportSettings" /> class.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.ActiveReports.Export.Text.Page.CsvExportSettings.#ctor(System.Collections.Specialized.NameValueCollection)">
+			<summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Export.Text.Page.CsvExportSettings" /> class.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.ActiveReports.Export.Text.Page.CsvExportSettings.NoHeader">
+			<summary>
+            Determines whether CSV Header should be omitted
+            </summary>
+		</member>
+		<member name="P:GrapeCity.ActiveReports.Export.Text.Page.CsvExportSettings.ColumnsDelimiter">
+			<summary>
+            The string to be placed between fields in data row.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.ActiveReports.Export.Text.Page.CsvExportSettings.RowsDelimiter">
+			<summary>
+            The string to be placed between data rows.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.ActiveReports.Export.Text.Page.CsvExportSettings.QuotationSymbol">
+			<summary>
+            The quotation symbol.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.ActiveReports.Export.Text.Page.CsvExportSettings.Encoding">
+			<summary>
+            The result file encoding.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.ActiveReports.Export.Text.Page.CsvExportSettings.Target">
+			<summary>
+            Layers filtration hint.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.ActiveReports.Export.Text.Page.JsonExport">
+			<summary>
+            Allows to export <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport" /> as json. 
+            </summary>
+		</member>
+		<member name="M:GrapeCity.ActiveReports.Export.Text.Page.JsonExport.Export(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.IO.TextWriter,GrapeCity.ActiveReports.Export.Text.Page.JsonExportSettings)">
+			<summary>
+            Writes the given <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport" /> object data as Json object using the given <see cref="T:System.IO.TextWriter" />.
+            </summary>
+			<param name="report">The report to be exported.</param>
+			<param name="writer">The writer to be report exported to.</param>
+			<param name="settings">Optional settings.</param>
+		</member>
+		<member name="T:GrapeCity.ActiveReports.Export.Text.Page.JsonExportSettings">
+			<summary>
+            Stores settings of json export.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.ActiveReports.Export.Text.Page.JsonExportSettings.#ctor">
+			<summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Export.Text.Page.JsonExportSettings" /> class.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.ActiveReports.Export.Text.Page.JsonExportSettings.#ctor(System.Collections.Specialized.NameValueCollection)">
+			<summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Export.Text.Page.JsonExportSettings" /> class.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.ActiveReports.Export.Text.Page.JsonExportSettings.Formatted">
+			<summary>
+            Specifies whether to format the output json text to be more readable.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.ActiveReports.Export.Text.Page.JsonExportSettings.QuotePropertyNames">
+			<summary>
+            Specifies whether property names should be enclosed in quotation marks.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.ActiveReports.Export.Text.Page.JsonExportSettings.Target">
+			<summary>
+            Layers filtration hint.
+            </summary>
+		</member>
+	</members>
+</doc>

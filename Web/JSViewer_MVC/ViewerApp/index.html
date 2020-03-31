@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<!-- IIS Virtual Directory name -->
+		<!--<base href="/JSViewer_MVC/">-->
+
+		<title>JS Viewer</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css">
+		<link rel="stylesheet" href="https://fonts.cat.net/css?family=Open+Sans:400,300,600,700" type="text/css">
+		<link rel="stylesheet" href="ViewerApp/jsViewer.min.css" type="text/css">
+		<script src="ViewerApp/jsViewer.min.js"></script>
+		<style type="text/css">
+            #viewerContainer {
+                background-color: #e5e5e5;
+                height: 100vh;
+            }
+
+            .main-nav.navbar {
+                position: fixed;
+                left: 0;
+                top: 0;
+                padding: 0;
+            }
+
+            #list-heading {
+                width: 100%;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #224e7b;
+                color: rgba(255,255,255,0.9);
+            }
+
+            #reportsList {
+                padding: .5rem 0;
+                height: calc(100vh - 50px);
+                width: 100%;
+                overflow: auto;
+                flex-wrap: nowrap;
+                background-color: #162740;
+            }
+
+            .reportList_item {
+                cursor: pointer;
+                color: #d1d1d1;
+                padding: 0 1rem;
+                font-size: 15px;
+                height: 34px;
+                display: flex;
+                align-items: center;
+                transition-duration: .2s;
+                flex-shrink: 0;
+            }
+
+            .reportList_item > span {
+                white-space: nowrap;
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .reportList_item:hover {
+                background-color: rgba(0,0,0,.2);
+            }
+
+            .reportList_item.active {
+                background-color: #d1d1d1;
+                color: #162740;
+            } 
+        </style>
+		<script type="text/javascript">
+            var currentViewer = null;
+			
+            function showReport(reportId){
+                if(currentViewer != null)
+                    currentViewer.destroy();
+			    
+                currentViewer = GrapeCity.ActiveReports.JSViewer.create({
+                    element: '#viewerContainer',
+                    reportService: {},
+                    reportID: reportId,
+                    settings : {
+                        zoomType: 'FitPage'
+					}
+                });
+
+                moveDropdownRoot();
+            }
+
+            function moveDropdownRoot() {
+                var approot = document.getElementById('viewerContainer');
+                var ddroot = document.getElementById('dropdown-root');
+                var node = ddroot.parentNode.removeChild(ddroot);
+                approot.appendChild(node);
+            }
+
+            function setActive(report) {
+                var reportsList = document.getElementById("reportsList");
+                var reports = reportsList.children;
+                for (let i = 0; i < reports.length; i++) {
+                    reports[i].classList.remove('active');
+                }
+                report.classList.add('active');
+            }
+            
+            function populateReports(){
+				var reportsList = document.getElementById("reportsList");
+				var oReq = new XMLHttpRequest();
+				oReq.onload = function () {
+					var reportsArray = JSON.parse(this.responseText);
+					for (let i = 0; i < reportsArray.length; i++) {
+						const reportName = reportsArray[i];
+						const report = document.createElement('li');
+						report.className = 'reportList_item';
+						report.title = reportName;
+						if (i === 0) report.className += ' active'
+						const title = document.createElement('span');
+						title.innerText = reportName;
+						report.appendChild(title);
+						reportsList.appendChild(report);
+
+						report.addEventListener('click', function(){
+							showReport(reportName);
+							setActive(report);
+						});
+					}
+					if (reportsArray.length > 0)
+						showReport(reportsArray[0]);
+				};
+				oReq.open("get", "reports", true);
+				oReq.send();
+			}
+
+			function localize() {
+				if(navigator.language==='ja'){
+					document.getElementById("list-heading").innerText = "レポートを選択";
+					document.title = "JSビューア";
+				}
+			}
+
+			function onLoad(){
+				localize();
+				populateReports();
+			}
+		</script>
+	</head>
+	<body onload="onLoad()">
+		<div style="width: 100%;">
+			<div style="float:left; width: 200pt" class="main-nav navbar">
+                <div id='list-heading'>Select report</div>
+				<ul id="reportsList" class="nav navbar-nav"></ul>
+			</div>
+			<div style="float:right;width:calc(100% - 200pt)" id="viewerContainer">
+			</div>
+		</div>
+	</body>
+</html>

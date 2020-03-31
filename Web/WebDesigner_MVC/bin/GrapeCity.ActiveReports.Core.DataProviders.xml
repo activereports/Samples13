@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+	<assembly>
+		<name>GrapeCity.ActiveReports.Core.DataProviders</name>
+	</assembly>
+	<members>
+		<member name="T:GrapeCity.ActiveReports.Core.DataProviders.CollectionExtensions">
+			<summary>
+            For internal use.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.BI.Data.DataProviders.LoginPasswordCredentials">
+			<summary>
+            Defines login/password credentials
+            </summary>
+		</member>
+		<member name="M:GrapeCity.BI.Data.DataProviders.LoginPasswordCredentials.#ctor(System.String,System.String)">
+			<summary>
+            Initializes a new instance of the LoginPasswordCredentials struct.
+            </summary>
+			<param name="login">User login</param>
+			<param name="password">User password</param>
+		</member>
+		<member name="P:GrapeCity.BI.Data.DataProviders.LoginPasswordCredentials.Login">
+			<summary>
+            Gets the user login.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.BI.Data.DataProviders.LoginPasswordCredentials.Password">
+			<summary>
+            Gets the password.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString">
+			<summary>
+            Parse and build CSV connection string.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString.#ctor(System.String)">
+			<summary>
+            Creates new <see cref="T:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString" /> object with fields filled from specified connection string. 
+            </summary>
+			<param name="connectionString">The connection string to be parsed.</param>
+		</member>
+		<member name="M:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString.#ctor">
+			<summary>
+            Creates new empty <see cref="T:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString" />.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString.Path">
+			<summary>
+            The path to the data file.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString.Encoding">
+			<summary>
+            The data file encoding.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString.DataStartLine">
+			<summary>
+            Specifies index of the first data row in file. Used to separate headings.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString.Columns">
+			<summary>
+            Columns definiton in next format: FieldName1(FieldType1, width),FieldName2,FieldName3,...
+            </summary>
+		</member>
+		<member name="F:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString.ColumnsSeparator">
+			<summary>
+            The chars sequence that delimits data fields in the row.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString.RowsSeparator">
+			<summary>
+            The chars sequence that marks the end of the row.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString.Locale">
+			<summary>
+            The culture that used to parse numeric values.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString.JoinRowsSeparators">
+			<summary>
+            Whether to treat consecutive rows separators as one
+            </summary>
+		</member>
+		<member name="F:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString.JoinColumnsSeparators">
+			<summary>
+            Whether to treat consecutive columns separators as one
+            </summary>
+		</member>
+		<member name="F:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString.TextQualifier">
+			<summary>
+            The chars sequence that marks the start and the end of the text literal.
+            </summary>
+		</member>
+		<member name="F:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString.HasHeaders">
+			<summary>
+            Whether the header containing the column names exists.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.BI.Data.DataProviders.Csv.CsvDataReader">
+			<summary>
+            Provides the implementation of <see cref="T:System.Data.Common.DbDataReader" /> for the .NET Framework CSV Data Provider.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.BI.Data.DataProviders.Csv.CsvDataReader.#ctor(System.String,System.Func{System.String,System.IO.Stream})">
+			<summary>
+            Creates new CsvDataReader.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.BI.Data.DataProviders.Csv.CsvDataReader.Read">
+			<summary>
+            Advances the <see cref="T:GrapeCity.BI.Data.DataProviders.Csv.CsvDataReader" /> to the next record.
+            </summary>
+			<returns>True if there are more rows, otherwise false.</returns>
+		</member>
+		<member name="P:GrapeCity.BI.Data.DataProviders.Csv.CsvDataReader.FieldCount">
+			<summary>
+            Gets the number of columns in the current row.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.BI.Data.DataProviders.Csv.CsvDataReader.GetFieldType(System.Int32)">
+			<summary>
+            Return the value of the specified field.
+            </summary>
+			<param name="i">The index of the field to find. </param>
+			<returns>The <see cref="T:System.Object" /> which will contain the field value upon return.</returns>
+		</member>
+		<member name="M:GrapeCity.BI.Data.DataProviders.Csv.CsvDataReader.GetName(System.Int32)">
+			<summary>
+            Return the value of the specified field.
+            </summary>
+			<param name="i">The index of the field to find. </param>
+			<returns>The name of the field or the empty string (""), if there is no value to return.</returns>
+		</member>
+		<member name="M:GrapeCity.BI.Data.DataProviders.Csv.CsvDataReader.GetValue(System.Int32)">
+			<summary>
+            Return the value of the specified field.
+            </summary>
+			<param name="i">The index of the field to find. </param>
+			<returns>The <see cref="T:System.Object" /> which will contain the field value upon return.</returns>
+		</member>
+		<member name="T:GrapeCity.BI.Data.DataProviders.DataProvidersFactory">
+			<summary>
+            Default data providers factory. Supports SQL, CSV, JSON, XML, TESTING, OBJECT data providers.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.BI.Data.DataProviders.DataProvidersFactory.GetFactory(System.String)">
+			<summary>
+            Returns <see cref="T:System.Data.Common.DbProviderFactory" /> by its name.
+            </summary>
+			<param name="name">The name of the data providers (SQL, CSV, etc...)</param>
+			<returns></returns>
+		</member>
+		<member name="T:GrapeCity.BI.Data.DataProviders.DataSetDataProviderFactory">
+			<summary>
+            Provides the <see cref="T:System.Data.Common.DbProviderFactory" /> implementation for DATASET.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.BI.Data.DataProviders.DbConnectionAdapter">
+			<summary>
+            Base class for the db connection adapters  
+            </summary>
+		</member>
+		<member name="T:GrapeCity.BI.Data.DataProviders.IDataProvidersFactory">
+			<summary>
+            Data providers factories abstract factory interface.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.BI.Data.DataProviders.IDataProvidersFactory.GetFactory(System.String)">
+			<summary>
+            Returns data provider factory.
+            </summary>
+			<param name="dataProviderName">Invariant data provider name (like SQL, OLEDB, etc..)</param>
+		</member>
+		<member name="M:GrapeCity.BI.Data.DataProviders.IDataProvidersFactory.GetAdapter(System.String)">
+			<summary>
+            Returns adapter for multivalue paramters setting.
+            </summary>
+			<param name="dataProviderName">Invariant data provider name to return adapter for.</param>
+		</member>
+		<member name="T:GrapeCity.BI.Data.DataProviders.IDbConnectionAdapter">
+			<summary>
+            Adapter for supporting of multivalue parameters and setting of credentials.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.BI.Data.DataProviders.IDbConnectionAdapter.IsSetMultiValueParameterSupported">
+			<summary>
+            Returns true if adapter supports setting multivalue parameters.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.BI.Data.DataProviders.IDbConnectionAdapter.SetMultiValueParameter(System.Data.Common.DbCommand,System.String,System.Object[])">
+			<summary>
+            Adds multivalue parameter values in to the command.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.BI.Data.DataProviders.IDbConnectionAdapter.IsCredentialsSupported">
+			<summary>
+            Returns true if set credentials is supported by command.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.BI.Data.DataProviders.IDbConnectionAdapter.SetCredentials(System.Data.Common.DbConnection,System.String,System.String)">
+			<summary>
+            Sets user login and password for the specified connection.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.BI.Data.DataProviders.IDbConnectionAdapter.IsSetConnectionStringSupported">
+			<summary>
+            Returns true if custom SetConnectionString is supported by connection adapter.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.BI.Data.DataProviders.IDbConnectionAdapter.SetConnectionString(System.Data.Common.DbConnection,System.String)">
+			<summary>
+            Sets connection string.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.BI.Data.DataProviders.IExDbCommand">
+			<summary>
+            Allows to command to get underlying data from external source.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.BI.Data.DataProviders.IExDbCommand.LocateDataSource">
+			<summary>
+            Locates data source.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.BI.Data.DataProviders.IExDbCommand.CanBeCached">
+			<summary>
+            Determines whether data - retrieved with this command - can be cached
+            If unsure, return false
+            </summary>
+		</member>
+		<member name="T:GrapeCity.BI.Data.DataProviders.InvalidFieldNameException">
+			<summary>
+            An exception that occurs when the specified schema (usually field names) is invalid.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.BI.Data.DataProviders.InvalidFieldNameException.#ctor(System.String)">
+			<summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.BI.Data.DataProviders.InvalidFieldNameException" /> class with a specified error message.
+            </summary>
+			<param name="message">A message that describes the error.</param>
+		</member>
+		<member name="M:GrapeCity.BI.Data.DataProviders.InvalidFieldNameException.#ctor(System.String,System.Exception)">
+			<summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.BI.Data.DataProviders.InvalidFieldNameException" /> class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+			<param name="message">The error message that explains the reason for the exception.</param>
+			<param name="innerException">
+            The exception that is the cause of the current exception.
+            If the innerException parameter is not a null reference, the current exception is raised in a catch block that handles the inner exception.
+            </param>
+		</member>
+		<member name="M:GrapeCity.BI.Data.DataProviders.InvalidFieldNameException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+			<summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.BI.Data.DataProviders.InvalidFieldNameException" /> class with serialized data.
+            </summary>
+			<remarks>
+            This constructor is called during deserialization to reconstitute the exception object transmitted over a stream.
+            </remarks>
+			<param name="info">The object that holds the serialized object data.</param>
+			<param name="context">The contextual information about the source or destination.</param>
+		</member>
+		<member name="T:GrapeCity.BI.Data.DataProviders.IResourceLocatorEnabled">
+			<summary>
+            Provides ability to pass ResourceLocator to DataProviderFactory.
+            For internal use only.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.BI.Data.DataProviders.IResourceLocatorEnabled.ResourceLocator">
+			<summary>
+            Gets or sets the function that returns resource stream for a given name.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.BI.Data.DataProviders.Json.JsonConnectionString">
+			<summary>
+            For internal use. Allows to parse or create json data provider connection string
+            </summary>
+		</member>
+		<member name="T:GrapeCity.BI.Data.DataProviders.Json.JsonDataProviderException">
+			<summary>
+            JSON problems.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.BI.Data.DataProviders.Json.JsonDataProviderException.ErrorCodes">
+			<summary>
+            Error codes.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.BI.Data.DataProviders.Json.JsonDataProviderException.ErrorCode">
+			<summary>
+            Error code of current exception.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.BI.Data.DataProviders.Json.JsonDataProviderFactory">
+			<summary>
+            Provides the <see cref="!:DataProviderFactory" /> implementation for JSON.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.BI.Data.DataProviders.ObjectDataProviderFactory">
+			<summary>
+            Provides the <see cref="T:System.Data.Common.DbProviderFactory" /> implementation for OBJECT.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.BI.Data.DataProviders.SqlDbConnectionAdapter">
+			<summary>
+            Allows to apply multivalue parameter values to sql command. 
+            </summary>
+		</member>
+		<member name="T:GrapeCity.BI.Data.DataProviders.Testing.TestingDataProviderFactory">
+			<summary>
+            For internal use only.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.BI.Data.DataProviders.TextProvidersBase.TextDbCommand">
+			<summary>
+            Base class for Db commands of text data providers (like csv, json, xml)
+            </summary>
+		</member>
+		<member name="P:GrapeCity.BI.Data.DataProviders.TextProvidersBase.TextDbCommand.CommandText">
+			<summary>
+            Gets or sets the command to execute at the data source.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.BI.Data.DataProviders.TextProvidersBase.TextDbCommand.CommandTimeout">
+			<summary>
+            Gets or sets the wait time before terminating an attempt to execute a command and generating an error.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.BI.Data.DataProviders.TextProvidersBase.TextDbCommand.CommandType">
+			<summary>
+            Gets or sets a value indicating how the <see cref="P:GrapeCity.BI.Data.DataProviders.TextProvidersBase.TextDbCommand.CommandText" /> property is interpreted.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.BI.Data.DataProviders.TextProvidersBase.TextDbConnection">
+			<summary>
+            Base class for connection of text data soruces (such as CSV, JSON, etc)
+            </summary>
+		</member>
+		<member name="P:GrapeCity.BI.Data.DataProviders.TextProvidersBase.TextDbConnection.ConnectionString">
+			<summary>
+            Gets or sets the string used to open the connection to the data source.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.BI.Data.DataProviders.TextProvidersBase.TextDbConnection.Open">
+			<summary>
+            Opens a data source connection.
+            </summary>
+			<remarks>It is used to validate connection string and make sure that source file is exists.</remarks>
+		</member>
+		<member name="M:GrapeCity.BI.Data.DataProviders.TextProvidersBase.TextDbConnection.Close">
+			<summary>
+            Closes the connection to the data source.
+            </summary>
+		</member>
+		<member name="M:GrapeCity.BI.Data.DataProviders.TextProvidersBase.TextDbConnection.BeginDbTransaction(System.Data.IsolationLevel)">
+			<summary>
+            Begins a data source transaction.
+            </summary>
+			<returns>An object representing the new transaction.</returns>
+		</member>
+		<member name="T:GrapeCity.BI.Data.DataProviders.DataProviders.TextDbDataReader">
+			<summary>
+            Provides some stubs for text data providers (like CSV, Json, etc.)
+            </summary>
+		</member>
+		<member name="M:GrapeCity.BI.Data.DataProviders.DataProviders.TextDbDataReader.NextResult">
+			<summary>
+            This method is used to move between result sets. It makes no sence for text data providers.
+            </summary>
+			<returns></returns>
+		</member>
+		<member name="T:GrapeCity.BI.Data.DataProviders.Xml.XmlCommand">
+			<summary>
+            Provides an <see cref="T:System.Data.Common.DbCommand" /> object for using an xml file or xml data as a data source.
+            </summary>
+		</member>
+		<member name="P:GrapeCity.BI.Data.DataProviders.Xml.XmlCommand.LocateDataSource">
+			<summary>
+            Locates data source.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.BI.Data.DataProviders.Xml.XmlConnectionString">
+			<summary>
+            For internal use. Allows to parse or create xml data provider connection string
+            </summary>
+		</member>
+		<member name="P:GrapeCity.BI.Data.DataProviders.Xml.XmlDataProviderException.ErrorCode">
+			<summary>
+            Error code of current exception.
+            </summary>
+		</member>
+		<member name="T:GrapeCity.BI.Data.DataProviders.XmlDataProviderFactory">
+			<summary>
+            Provides the <see cref="T:System.Data.Common.DbProviderFactory" /> implementation for XML.
+            </summary>
+		</member>
+	</members>
+</doc>

@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{A6F15189-CD56-4A69-B582-A182F4275FAE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GrapeCity.ActiveReports.Calendar</RootNamespace>
+    <AssemblyName>GrapeCity.ActiveReports.Calendar.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gcef.Data.ExpressionInfo">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Design.Win">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Diagnostics">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Document">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Drawing.Gdi">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Image">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Rdl">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Rendering">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.9.10348, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.2.5.9.10348\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.mocks, Version=2.5.9.10348, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.2.5.9.10348\lib\nunit.mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="pnunit.framework, Version=1.0.4000.25744, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.2.5.9.10348\lib\pnunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CalendarActionFixture.cs" />
+    <Compile Include="CalendarUtilitiesFixture.cs" />
+    <Compile Include="Calendar\CalendarBaseFixture.cs" />
+    <Compile Include="Calendar\CalendarDataRegionRenderingFixture.cs" />
+    <Compile Include="Design\Designers\Calendar\CalendarDesignerTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestHelper.cs" />
+    <Compile Include="TestingRenderingExtension.cs" />
+    <Compile Include="ValidationUtilsFixture.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CalendarComponent\CalendarComponent.csproj">
+      <Project>{40126fb0-44ec-4580-ae8f-e10251cc9328}</Project>
+      <Name>CalendarComponent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CalendarDesigner\CalendarDesigner.csproj">
+      <Project>{b2ea3eb8-6439-493f-88a2-563a1464cdbb}</Project>
+      <Name>CalendarDesigner</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Grapecity.ActiveReports.config" />
+    <None Include="packages.config" />
+    <None Include="Resources\Calendar-AppointmentNoText.rdlx" />
+    <None Include="Resources\Calendar-AppointmentWrapping.rdlx" />
+    <None Include="Resources\Calendar-AppointmentWrappingRTL.rdlx" />
+    <None Include="Resources\Calendar-BackgroundColor.rdlx" />
+    <None Include="Resources\Calendar-BadDates.rdlx" />
+    <None Include="Resources\Calendar-Bookmarklink.rdlx" />
+    <None Include="Resources\Calendar-BorderStyle.rdlx" />
+    <None Include="Resources\Calendar-DayStyle.rdlx" />
+    <None Include="Resources\Calendar-Drillthrough.rdlx" />
+    <None Include="Resources\Calendar-DrillthroughWithParameters.rdlx" />
+    <None Include="Resources\Calendar-EventStyles.rdlx" />
+    <None Include="Resources\Calendar-FillerDayStyle.rdlx" />
+    <None Include="Resources\Calendar-Filters.rdlx" />
+    <None Include="Resources\Calendar-FontStyle.rdlx" />
+    <None Include="Resources\Calendar-Format.rdlx" />
+    <None Include="Resources\Calendar-Hyperlink.rdlx" />
+    <None Include="Resources\Calendar-InvalidBorderWidth.rdlx" />
+    <None Include="Resources\Calendar-InvalidBorderWidthExpression.rdlx" />
+    <None Include="Resources\Calendar-MonthTitle.rdlx" />
+    <None Include="Resources\Calendar-NoData.rdlx" />
+    <None Include="Resources\Calendar-TextAlign.rdlx" />
+    <None Include="Resources\Calendar-WeekendStyle.rdlx" />
+    <None Include="Resources\Calendar.rdlx" />
+    <None Include="Resources\Calendar_AppointmentDetailGrouping.rdlx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(ProjectDir)Grapecity.ActiveReports.config" "$(TargetDir)Grapecity.ActiveReports.config"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

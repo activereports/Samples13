@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTML5_WebApiWithAngularJS", "HTML5_WebApiWithAngularJS\HTML5_WebApiWithAngularJS.csproj", "{F605A4A1-310D-441D-8B3D-AC284AEE7879}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F605A4A1-310D-441D-8B3D-AC284AEE7879}.Debug|x86.ActiveCfg = Debug|x86
+		{F605A4A1-310D-441D-8B3D-AC284AEE7879}.Debug|x86.Build.0 = Debug|x86
+		{F605A4A1-310D-441D-8B3D-AC284AEE7879}.Release|x86.ActiveCfg = Release|x86
+		{F605A4A1-310D-441D-8B3D-AC284AEE7879}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E6334B9-3D53-4622-AC1A-D482F451ED79}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,101 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFrameworks>net462</TargetFrameworks>
+    <AssemblySearchPaths>$(AssemblySearchPaths);{GAC}</AssemblySearchPaths>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.1.1" />
+  </ItemGroup>
+ <ItemGroup>
+    <Reference Include="Gcef.Data.DataEngine">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Gcef.Data.ExpressionInfo">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Gcef.Data.VBFunctionLib">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports">
+      <Private>True</Private>
+    </Reference>
+     <Reference Include="GrapeCity.ActiveReports.Aspnetcore.Designer">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Chart">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.DataProviders">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Diagnostics">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Drawing.Gdi">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Excel.Page">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Html.Page">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Text.Page">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Word.Page">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Rdl">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Rendering">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Document">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Excel">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Html">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Image">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Pdf">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Rdf">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Svg">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Word">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="App.config" />
+    <Content Remove="appsettings.Development.json" />
+    <Content Remove="appsettings.json" />
+    <Content Remove="GrapeCity.ActiveReports.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views/**/*.cshtml" />
+  </ItemGroup>
+</Project>

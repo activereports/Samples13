@@ -1,0 +1,155 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net462</TargetFramework>
+        <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+        <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+        <IsPackable>false</IsPackable>
+        <SpaRoot>ClientApp\</SpaRoot>
+        <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+        <AssemblySearchPaths>$(AssemblySearchPaths);{GAC}</AssemblySearchPaths>
+        <!-- Set this to true if you enable server-side prerendering -->
+        <BuildServerSideRenderer>false</BuildServerSideRenderer>
+        <Prefer32bit>true</Prefer32bit>
+        <AspNetCoreHostingModelV2>InProcess</AspNetCoreHostingModelV2>
+        <PublishToIIS>false</PublishToIIS>
+        <IISVirtualDirectoryName>/JSViewer_Angular_Core/</IISVirtualDirectoryName>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore" Version="2.1.2" />
+      <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.1.1" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.1" />
+      <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="2.1.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="Properties\licenses.licx" />
+         <EmbeddedResource Include="..\Reports\*.*" LinkBase="Reports" />
+        <!-- Don't publish the SPA source files, but do show them in the project files list -->
+        <Content Remove="$(SpaRoot)**" />
+        <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+    </ItemGroup>
+    <ItemGroup>
+      <Reference Include="Gcef.Data.DataEngine">
+        <Private>True</Private>
+      </Reference>
+      <Reference Include="Gcef.Data.ExpressionInfo">
+        <Private>True</Private>
+      </Reference>
+      <Reference Include="Gcef.Data.VBFunctionLib">
+        <Private>True</Private>
+      </Reference>
+      <Reference Include="GrapeCity.ActiveReports">
+        <Private>True</Private>
+      </Reference>
+      <Reference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer">
+        <Private>True</Private>
+      </Reference>
+      <Reference Include="GrapeCity.ActiveReports.Chart">
+        <Private>True</Private>
+      </Reference>
+      <Reference Include="GrapeCity.ActiveReports.Core.DataProviders">
+        <Private>True</Private>
+      </Reference>
+      <Reference Include="GrapeCity.ActiveReports.Core.Diagnostics">
+        <Private>True</Private>
+      </Reference>
+      <Reference Include="GrapeCity.ActiveReports.Core.Drawing.Gdi">
+        <Private>True</Private>
+      </Reference>
+      <Reference Include="GrapeCity.ActiveReports.Core.Export.Excel.Page">
+        <Private>True</Private>
+      </Reference>
+      <Reference Include="GrapeCity.ActiveReports.Core.Export.Html.Page">
+        <Private>True</Private>
+      </Reference>
+      <Reference Include="GrapeCity.ActiveReports.Core.Export.Text.Page">
+        <Private>True</Private>
+      </Reference>
+      <Reference Include="GrapeCity.ActiveReports.Core.Export.Word.Page">
+        <Private>True</Private>
+      </Reference>
+      <Reference Include="GrapeCity.ActiveReports.Core.Rdl">
+        <Private>True</Private>
+      </Reference>
+      <Reference Include="GrapeCity.ActiveReports.Core.Rendering">
+        <Private>True</Private>
+      </Reference>
+      <Reference Include="GrapeCity.ActiveReports.Document">
+        <Private>True</Private>
+      </Reference>
+      <Reference Include="GrapeCity.ActiveReports.Export.Excel">
+        <Private>True</Private>
+      </Reference>
+      <Reference Include="GrapeCity.ActiveReports.Export.Html">
+        <Private>True</Private>
+      </Reference>
+      <Reference Include="GrapeCity.ActiveReports.Export.Image">
+        <Private>True</Private>
+      </Reference>
+      <Reference Include="GrapeCity.ActiveReports.Export.Pdf">
+        <Private>True</Private>
+      </Reference>
+      <Reference Include="GrapeCity.ActiveReports.Export.Rdf">
+        <Private>True</Private>
+      </Reference>
+      <Reference Include="GrapeCity.ActiveReports.Export.Svg">
+        <Private>True</Private>
+      </Reference>
+      <Reference Include="GrapeCity.ActiveReports.Export.Word">
+        <Private>True</Private>
+      </Reference>
+      <Reference Include="GrapeCity.ActiveReports.Export.Xml">
+        <Private>True</Private>
+      </Reference>
+    </ItemGroup>
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="ClientApp\e2e\tsconfig.e2e.json" />
+    </ItemGroup>
+
+    <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
+        <!-- Ensure Node.js is installed -->
+        <Exec Command="node --version" ContinueOnError="true">
+            <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+        </Exec>
+        <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+        <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+        <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+    </Target>
+
+    <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish" Condition="'$(PublishToIIS)' == 'false'">
+        <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+        <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+        <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build -- --prod" />
+        <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build:ssr -- --prod" Condition=" '$(BuildServerSideRenderer)' == 'true' " />
+
+        <!-- Include the newly-built files in the publish output -->
+        <ItemGroup>
+            <DistFiles Include="$(SpaRoot)dist\**; $(SpaRoot)dist-server\**" />
+            <DistFiles Include="$(SpaRoot)node_modules\**" Condition="'$(BuildServerSideRenderer)' == 'true'" />
+            <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+                <RelativePath>%(DistFiles.Identity)</RelativePath>
+                <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+            </ResolvedFileToPublish>
+        </ItemGroup>
+    </Target>
+
+    <Target Name="PublishIISRunWebpack" AfterTargets="ComputeFilesToPublish" Condition="'$(PublishToIIS)' == 'true'">
+        <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+        <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+        <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build -- --base-href &quot;$(IISVirtualDirectoryName)&quot; --prod" />
+        <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build:ssr -- --base-href &quot;$(IISVirtualDirectoryName)&quot; --prod" Condition=" '$(BuildServerSideRenderer)' == 'true' " />
+
+        <!-- Include the newly-built files in the publish output -->
+        <ItemGroup>
+            <DistFiles Include="$(SpaRoot)dist\**; $(SpaRoot)dist-server\**" />
+            <DistFiles Include="$(SpaRoot)node_modules\**" Condition="'$(BuildServerSideRenderer)' == 'true'" />
+            <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+                <RelativePath>%(DistFiles.Identity)</RelativePath>
+                <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+            </ResolvedFileToPublish>
+        </ItemGroup>
+    </Target>
+
+</Project>

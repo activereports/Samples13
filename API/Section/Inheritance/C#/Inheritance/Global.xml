@@ -1,0 +1,64 @@
+﻿<?xml version="1.0"?>
+<Files>
+<File Name="rptDesignBase.Designer.cs" OriginalID="0">
+  <Items>
+     <Item>
+       <originaltag ID="0"><![CDATA[this.StyleSheet.Add(new DDCssLib.StyleSheetRule("font-family: Arial; font-style: normal; text-decoration: none; font-weight: norma" +]]></originaltag>
+       <entag ID="1"><![CDATA[this.StyleSheet.Add(new DDCssLib.StyleSheetRule("font-family: Arial; font-style: normal; text-decoration: none; font-weight: norma" +]]></entag>
+       <jptag ID="2"><![CDATA[this.StyleSheet.Add(new DDCssLib.StyleSheetRule("font-family: ＭＳ Ｐゴシック; font-style: normal; text-decoration: none; font-weight: norma" +]]></jptag>     
+     </Item>
+     <Item>
+       <originaltag ID="0"><![CDATA["l; font-size: 10pt; color: Black; ddo-char-set: 186", "Normal"));]]></originaltag>
+       <entag ID="1"><![CDATA["l; font-size: 10pt; color: Black; ddo-char-set: 186", "Normal"));]]></entag>
+       <jptag ID="2"><![CDATA["l; font-size: 10pt; color: Black; ddo-char-set: 128", "Normal"));]]></jptag>         
+     </Item> 
+  </Items>
+</File>
+<File Name="rptDesignChild.Designer.cs" OriginalID="0">
+  <Items>
+     <Item>
+       <originaltag ID="0"><![CDATA["color: Black; font-family: MS UI Gothic; ddo-char-set: 186", "Normal"));]]></originaltag>
+       <entag ID="1"><![CDATA["color: Black; font-family: MS UI Gothic; ddo-char-set: 186", "Normal"));]]></entag>
+       <jptag ID="2"><![CDATA["color: Black; font-family: ＭＳ Ｐゴシック; ddo-char-set: 128", "Normal"));]]></jptag>     
+     </Item>
+    <Item>
+      <originaltag ID="0"><![CDATA[oleDBDataSource1.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Program Files\\ActiveReportsNET9\\Data\\NWIND.MDB;Persist Security I" +]]></originaltag>
+      <entag ID="1"><![CDATA[oleDBDataSource1.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Data\\NWIND.MDB;Persist Security Info=False";]]></entag>
+      <jptag ID="2"><![CDATA[oleDBDataSource1.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Program Files\\ActiveReportsNET9\\Data\\NWIND.MDB;Persist Security Info=False";]]></jptag>
+    </Item>
+    <Item>
+      <originaltag ID="0"><![CDATA["nfo=False";]]></originaltag>
+      <entag ID="1"><![CDATA[//]]></entag>
+      <jptag ID="2"><![CDATA[//]]></jptag>
+    </Item>
+  </Items>
+</File>
+<File Name="rptInheritBase.Designer.cs" OriginalID="0">
+  <Items>
+     <Item>
+       <originaltag ID="0"><![CDATA[this.StyleSheet.Add(new DDCssLib.StyleSheetRule("font-family: Arial; font-style: normal; text-decoration: none; font-weight: norma" +]]></originaltag>
+       <entag ID="1"><![CDATA[this.StyleSheet.Add(new DDCssLib.StyleSheetRule("font-family: Arial; font-style: normal; text-decoration: none; font-weight: norma" +]]></entag>
+       <jptag ID="2"><![CDATA[this.StyleSheet.Add(new DDCssLib.StyleSheetRule("font-family: ＭＳ Ｐゴシック; font-style: normal; text-decoration: none; font-weight: norma" +]]></jptag>     
+     </Item>
+     <Item>
+       <originaltag ID="0"><![CDATA["l; font-size: 10pt; color: Black; ddo-char-set: 186", "Normal"));]]></originaltag>
+       <entag ID="1"><![CDATA["l; font-size: 10pt; color: Black; ddo-char-set: 186", "Normal"));]]></entag>
+       <jptag ID="2"><![CDATA["l; font-size: 10pt; color: Black; ddo-char-set: 128", "Normal"));]]></jptag>         
+     </Item> 
+  </Items>
+</File>
+<File Name="rptInheritChild.Designer.cs">
+  <Items>
+     <Item>
+       <originaltag><![CDATA[this.StyleSheet.Add(new DDCssLib.StyleSheetRule("font-family: Arial; font-style: normal; text-decoration: none; font-weight: norma" +]]></originaltag>
+       <entag><![CDATA[this.StyleSheet.Add(new DDCssLib.StyleSheetRule("font-family: Arial; font-style: normal; text-decoration: none; font-weight: norma" +]]></entag>
+       <jptag><![CDATA[this.StyleSheet.Add(new DDCssLib.StyleSheetRule("font-family: ＭＳ Ｐゴシック; font-style: normal; text-decoration: none; font-weight: norma" +]]></jptag>     
+     </Item>
+     <Item>
+       <originaltag><![CDATA["l; font-size: 10pt; color: Black; ddo-char-set: 186", "Normal"));]]></originaltag>
+       <entag><![CDATA["l; font-size: 10pt; color: Black; ddo-char-set: 186", "Normal"));]]></entag>
+       <jptag><![CDATA["l; font-size: 10pt; color: Black; ddo-char-set: 128", "Normal"));]]></jptag>         
+     </Item> 
+  </Items>
+</File>
+</Files>

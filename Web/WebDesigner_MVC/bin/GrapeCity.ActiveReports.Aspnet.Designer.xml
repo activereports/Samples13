@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GrapeCity.ActiveReports.Aspnet.Designer</name>
+    </assembly>
+    <members>
+        <member name="T:GrapeCity.ActiveReports.Aspnet.Designer.WebHostBuilderExtensions">
+            <summary>
+            Contains methods for configuring of web host application.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Aspnet.Designer.WebHostBuilderExtensions.UseDesigner(Owin.IAppBuilder,System.Action{GrapeCity.ActiveReports.Aspnet.Designer.DesignerSettings})">
+            <summary>
+            Configures middleware for ActiveReports API and handlers.
+            </summary>
+            <param name="builder"></param>
+            <param name="configure"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Aspnet.Designer.DesignerSettings">
+            <summary>
+            Defines middleware settings.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Aspnet.Designer.DesignerSettings.UseFileStore(System.IO.DirectoryInfo,System.Boolean)">
+            <summary>
+            Use directory as the resources source.
+            </summary>
+            <param name="rootPath"></param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Aspnet.Designer.Implementation.FileSystemResources.GetResourceId(System.String)">
+            <summary>
+            Get resource file id
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Aspnet.Designer.Implementation.FileSystemResources.GetResourceName(System.String)">
+            <summary>
+            Get resource file name
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Aspnet.Designer.ReportResources">
+            <summary>
+            Represents some static methods for collecting report resources.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Aspnet.Designer.ReportResources.GetReferences(System.Byte[])">
+            <summary>
+            Collect report resource references.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Aspnet.Designer.ReportResources.UpdateReferences(System.Byte[],System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Update report resource references.
+            </summary>
+            <param name="content"></param>
+            <param name="referencesMap"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Aspnet.Designer.Services.DesignerConfiguration">
+            <summary>
+            Allows to configure designer Web API controller.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Aspnet.Designer.Services.IReportInfo">
+            <summary>
+            Defines the minimum required report info
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Aspnet.Designer.Services.IReportInfo.Id">
+            <summary>
+            Report id
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Aspnet.Designer.Services.IReportInfo.Name">
+            <summary>
+            Report name
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Aspnet.Designer.Services.IReportInfo.Type">
+            <summary>
+            Report type
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Aspnet.Designer.Services.IThemeInfo">
+            <summary>
+            Defines the minimum required theme info
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Aspnet.Designer.Services.IThemeInfo.Id">
+            <summary>
+            Theme id
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Aspnet.Designer.Services.IThemeInfo.Title">
+            <summary>
+            Theme title
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Aspnet.Designer.Services.IThemeInfo.Dark1">
+            <summary>
+            Colors/Dark1 value
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Aspnet.Designer.Services.IThemeInfo.Dark2">
+            <summary>
+            Colors/Dark2 value
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Aspnet.Designer.Services.IThemeInfo.Light1">
+            <summary>
+            Colors/Light1 value
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Aspnet.Designer.Services.IThemeInfo.Light2">
+            <summary>
+            Colors/Light2 value
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Aspnet.Designer.Services.IThemeInfo.Accent1">
+            <summary>
+            Colors/Accent1 value
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Aspnet.Designer.Services.IThemeInfo.Accent2">
+            <summary>
+            Colors/Accent2 value
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Aspnet.Designer.Services.IThemeInfo.Accent3">
+            <summary>
+            Colors/Accent3 value
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Aspnet.Designer.Services.IThemeInfo.Accent4">
+            <summary>
+            Colors/Accent4 value
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Aspnet.Designer.Services.IThemeInfo.Accent5">
+            <summary>
+            Colors/Accent5 value
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Aspnet.Designer.Services.IThemeInfo.Accent6">
+            <summary>
+            Colors/Accent6 value
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Aspnet.Designer.Services.IThemeInfo.MajorFontFamily">
+            <summary>
+            Fonts/MajorFont/Family value
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Aspnet.Designer.Services.IThemeInfo.MinorFontFamily">
+            <summary>
+            Fonts/MinorFont/Family value
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Aspnet.Designer.Services.IImageInfo">
+            <summary>
+            Defines the minimum required image info
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Aspnet.Designer.Services.IImageInfo.Id">
+            <summary>
+            Image id
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Aspnet.Designer.Services.IImageInfo.Name">
+            <summary>
+            Image name
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Aspnet.Designer.Services.IImageInfo.Thumbnail">
+            <summary>
+            Image thumbnail
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Aspnet.Designer.Services.IImageInfo.ContentType">
+            <summary>
+            Image content type
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Aspnet.Designer.Services.IResourcesService">
+            <summary>
+            Allows to load resources (reports, themes, images) from custom storage.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Aspnet.Designer.Services.IResourcesService.GetReport(System.String)">
+            <summary>
+            Get report content by id
+            </summary>
+            <param name="id">Report id</param>
+            <returns>Report content</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Aspnet.Designer.Services.IResourcesService.GetReportsList">
+            <summary>
+            Get reports list
+            </summary>
+            <returns>Reports list</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Aspnet.Designer.Services.IResourcesService.SaveReport(System.String,GrapeCity.ActiveReports.PageReportModel.Report,System.Boolean)">
+            <summary>
+            Save report
+            </summary>
+            <param name="name">Report name</param>
+            <param name="content">Report content</param>
+            <param name="isTemporary">Save report as temporary report</param>
+            <returns>Report id</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Aspnet.Designer.Services.IResourcesService.UpdateReport(System.String,GrapeCity.ActiveReports.PageReportModel.Report)">
+            <summary>
+            Update report
+            </summary>
+            <param name="id">Report id</param>
+            <param name="content">Report content</param>
+            <param name="isTemporary">Save report as temporary report</param>
+            <returns>Report id</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Aspnet.Designer.Services.IResourcesService.DeleteReport(System.String)">
+            <summary>
+            Delete report
+            </summary>
+            <param name="id">Report id</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Aspnet.Designer.Services.IResourcesService.GetTheme(System.String)">
+            <summary>
+            Get theme content by id
+            </summary>
+            <param name="id">Theme id</param>
+            <returns>Theme content</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Aspnet.Designer.Services.IResourcesService.GetThemesList">
+            <summary>
+            Get themes list
+            </summary>
+            <returns>Themes list</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Aspnet.Designer.Services.IResourcesService.GetImage(System.String,System.String@)">
+            <summary>
+            Get image content by id
+            </summary>
+            <param name="id">Image id</param>
+            <param name="mimeType">Image MIME type</param>
+            <returns>Image content</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Aspnet.Designer.Services.IResourcesService.GetImagesList">
+            <summary>
+            Get images list
+            </summary>
+            <returns>Images list</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Aspnet.Designer.Services.License.IsProfessional">
+            <summary>
+            Checks whether license is professional or professional trial.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Aspnet.Designer.Services.License.IsStandard">
+            <summary>
+            Checks whether license is standard or standard trial.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Aspnet.Designer.Utilities.ReportConverter.ToJson(GrapeCity.ActiveReports.PageReportModel.Report)">
+            <summary>
+            Deserialize <see cref="T:GrapeCity.ActiveReports.PageReportModel.Report"/> to JSON content
+            </summary>
+            <param name="content">Serialized <see cref="T:GrapeCity.ActiveReports.PageReportModel.Report"/></param>
+            <returns>JSON report content</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Aspnet.Designer.Utilities.ReportConverter.ToXml(GrapeCity.ActiveReports.PageReportModel.Report)">
+            <summary>
+            Deserialize <see cref="T:GrapeCity.ActiveReports.PageReportModel.Report"/> to XML content
+            </summary>
+            <param name="content">Serialized <see cref="T:GrapeCity.ActiveReports.PageReportModel.Report"/></param>
+            <returns>XML report content</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Aspnet.Designer.Utilities.ReportConverter.FromJson(System.Byte[])">
+            <summary>
+            Serialize <see cref="T:GrapeCity.ActiveReports.PageReportModel.Report"/> from JSON content
+            </summary>
+            <param name="content">JSON report content</param>
+            <returns>Serialized <see cref="T:GrapeCity.ActiveReports.PageReportModel.Report"/></returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Aspnet.Designer.Utilities.ReportConverter.FromXML(System.Byte[])">
+            <summary>
+            Serialize <see cref="T:GrapeCity.ActiveReports.PageReportModel.Report"/> from XML content
+            </summary>
+            <param name="content">XML report content</param>
+            <returns>Serialized <see cref="T:GrapeCity.ActiveReports.PageReportModel.Report"/></returns>
+        </member>
+    </members>
+</doc>

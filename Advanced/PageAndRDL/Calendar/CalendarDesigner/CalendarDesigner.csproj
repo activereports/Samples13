@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{B2EA3EB8-6439-493F-88A2-563A1464CDBB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GrapeCity.ActiveReports.Calendar</RootNamespace>
+    <AssemblyName>GrapeCity.ActiveReports.Calendar.Designer</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gcef.Data.ExpressionInfo">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Design.Win">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Diagnostics">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Drawing.Gdi">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Rdl">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Rendering">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Viewer.Win">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Design\Converters\DesignImageValueTypeConverter.cs" />
+    <Compile Include="Design\Designers\CalendarDesigner.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\Designers\ReportItemDesignerBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\Properties\ActionRootConverter.cs" />
+    <Compile Include="Design\Properties\ActionUITypeEditor.cs" />
+    <Compile Include="Design\Properties\AppointmentStyle.cs" />
+    <Compile Include="Design\Properties\DayHeadersStyle.cs" />
+    <Compile Include="Design\Properties\DayStyle.cs" />
+    <Compile Include="Design\Properties\DesignImage.cs" />
+    <Compile Include="Design\Properties\DesignLineStyle.cs" />
+    <Compile Include="Design\Properties\DesignTextStyle.cs" />
+    <Compile Include="Design\Properties\FillerDayStyle.cs" />
+    <Compile Include="Design\Properties\MonthTitleStyle.cs" />
+    <Compile Include="Design\Properties\NullableFontFamilyExpressionInfoConverter.cs" />
+    <Compile Include="Design\Properties\RootExpandableConverter.cs" />
+    <Compile Include="Design\Properties\ShadowProperty.cs" />
+    <Compile Include="Design\Properties\WeekendStyle.cs" />
+    <Compile Include="Design\SuspendLayoutTransaction.cs" />
+    <Compile Include="Design\Tools\Utils.cs" />
+    <Compile Include="Design\TypeEditors\DesignImageValueTypeEditor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Design\SmartPanels\Calendar\CalendarAppearancePage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\SmartPanels\Calendar\CalendarDataPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\SmartPanels\Calendar\CalendarDayAppearancePage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\SmartPanels\Calendar\CalendarDayHeadersAppearancePage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\SmartPanels\Calendar\CalendarDetailGroupPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\SmartPanels\Calendar\CalendarEventAppearancePage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\SmartPanels\Calendar\CalendarFillerDayAppearancePage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\SmartPanels\Calendar\CalendarFiltersPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\SmartPanels\Calendar\CalendarGeneralPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\SmartPanels\Calendar\CalendarMonthAppearancePage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\SmartPanels\Calendar\CalendarNavigationPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\SmartPanels\Calendar\CalendarPageBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\SmartPanels\Calendar\CalendarSmartPanelBuilder.cs" />
+    <Compile Include="Design\SmartPanels\Calendar\CalendarSortingPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\SmartPanels\Calendar\CalendarVisibilityPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\SmartPanels\Calendar\CalendarWeekendAppearancePage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\SmartPanels\Calendar\ChartDataOutputPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\SmartPanels\Controls\ControlGroupHeadingLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\SmartPanels\Controls\DataGridComboBoxColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\SmartPanels\Controls\DesignImageStyleEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\SmartPanels\Controls\DesignLineStyleEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\SmartPanels\Controls\DesignTextStyleEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\SmartPanels\Controls\TypedValueEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\SmartPanels\Controls\VisibilityEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\SmartPanels\HorizontalFlowLayoutEngine.cs" />
+    <Compile Include="Design\SmartPanels\HorizontalPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\SmartPanels\VerticalFlowLayoutEngine.cs" />
+    <Compile Include="Design\SmartPanels\VerticalPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rendering\DesignerImageLocatorService.cs" />
+    <Compile Include="ResourceDescriptionAttribute.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Validation\IValidatable.cs" />
+    <Compile Include="Validation\ValidationUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CalendarComponent\CalendarComponent.csproj">
+      <Project>{40126fb0-44ec-4580-ae8f-e10251cc9328}</Project>
+      <Name>CalendarComponent</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\CalendarSmartPanel\CalendarAppearance_16.png" />
+    <Content Include="Resources\CalendarSmartPanel\CalendarAppearance_32.png" />
+    <Content Include="Resources\CalendarSmartPanel\Data_16.png" />
+    <Content Include="Resources\CalendarSmartPanel\Data_32.png" />
+    <Content Include="Resources\CalendarSmartPanel\Data_Output_16.png" />
+    <Content Include="Resources\CalendarSmartPanel\Data_Output_32.png" />
+    <Content Include="Resources\CalendarSmartPanel\DayAppearance_16.png" />
+    <Content Include="Resources\CalendarSmartPanel\DayAppearance_32.png" />
+    <Content Include="Resources\CalendarSmartPanel\DayHeadersAppearance_16.png" />
+    <Content Include="Resources\CalendarSmartPanel\DayHeadersAppearance_32.png" />
+    <Content Include="Resources\CalendarSmartPanel\EventAppearance_16.png" />
+    <Content Include="Resources\CalendarSmartPanel\EventAppearance_32.png" />
+    <Content Include="Resources\CalendarSmartPanel\FillerDayAppearance_16.png" />
+    <Content Include="Resources\CalendarSmartPanel\FillerDayAppearance_32.png" />
+    <Content Include="Resources\CalendarSmartPanel\Filters_16.png" />
+    <Content Include="Resources\CalendarSmartPanel\Filters_32.png" />
+    <Content Include="Resources\CalendarSmartPanel\Format_16.png" />
+    <Content Include="Resources\CalendarSmartPanel\Format_32.png" />
+    <Content Include="Resources\CalendarSmartPanel\General_16.png" />
+    <Content Include="Resources\CalendarSmartPanel\General_32.png" />
+    <Content Include="Resources\CalendarSmartPanel\MonthAppearance_16.png" />
+    <Content Include="Resources\CalendarSmartPanel\MonthAppearance_32.png" />
+    <Content Include="Resources\CalendarSmartPanel\Navigation_16.png" />
+    <Content Include="Resources\CalendarSmartPanel\Navigation_32.png" />
+    <Content Include="Resources\CalendarSmartPanel\Sorting_16.png" />
+    <Content Include="Resources\CalendarSmartPanel\Sorting_32.png" />
+    <Content Include="Resources\CalendarSmartPanel\Visibility_16.png" />
+    <Content Include="Resources\CalendarSmartPanel\Visibility_32.png" />
+    <Content Include="Resources\CalendarSmartPanel\WeekendAppearance_16.png" />
+    <Content Include="Resources\CalendarSmartPanel\WeekendAppearance_32.png" />
+    <Content Include="Resources\ComboDown.png" />
+    <Content Include="Resources\CommonSmartPanel\Custom_16.png" />
+    <Content Include="Resources\CommonSmartPanel\Custom_32.png" />
+    <Content Include="Resources\CommonSmartPanel\Down.png" />
+    <Content Include="Resources\CommonSmartPanel\Home.png" />
+    <Content Include="Resources\CommonSmartPanel\Remove.png" />
+    <Content Include="Resources\CommonSmartPanel\Up.png" />
+    <EmbeddedResource Include="Resources\CalendarToolboxIcon.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
